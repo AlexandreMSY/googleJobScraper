@@ -64,17 +64,17 @@ class GoogleJobScraper:
 
             last_height = new_height
 
-        print(self.__getJobDetails(foundJobsList.find_elements(By.TAG_NAME, "li")[15]))
+        print(self.__getJobDetails(foundJobsList.find_elements(By.TAG_NAME, "li")[10]))
 
-    #this method scrapes the job listing attributes such as job title, company and etc
+    # this method scrapes the job listing attributes such as job title, company and etc
     def __getJobDetails(self, element: WebElement) -> dict:
         webdriver.ActionChains(self.driver).move_to_element(element).click(
             element
         ).perform()
 
         time.sleep(1)
+        
         jobDetailsDiv = self.driver.find_element(By.ID, "tl_ditsc")
-
         jobTitle = jobDetailsDiv.find_element(By.TAG_NAME, "h2").text
         company = jobDetailsDiv.find_element(
             By.XPATH,
@@ -94,7 +94,9 @@ class GoogleJobScraper:
 
         for element in contractDetailsDiv:
             if containsNumber(element.text):
-                if "ago" in element.text:
+                if (
+                    "ago" in element.text
+                ):  # checks if string contains the word ago as in 9 months ago
                     timePosted = element.text
                 else:
                     contractDetails["salary"] = element.text
@@ -107,5 +109,21 @@ class GoogleJobScraper:
             "location": location,
             "timePosted": timePosted,
             "contractDetails": contractDetails,
-            "jobDescription": jobDescription
+            "jobDescription": jobDescription,
+            "url": self.__getShareLink()
         }
+
+    def __getShareLink(self) -> str:
+        jobDetailsDiv = self.driver.find_element(By.ID, "tl_ditsc")
+        shareButton = jobDetailsDiv.find_element(By.XPATH, '/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[1]/div/span/span')
+        
+        webdriver.ActionChains(self.driver).move_to_element(shareButton).click(
+            shareButton
+        ).perform()
+        
+        sharePopUp = self.driver.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/span/div")
+        inputFieldValue = sharePopUp.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/span/div/div[3]/div[2]/div[3]/div/g-text-field/div[1]/div/input").get_attribute("value")
+        
+        return inputFieldValue
+        
+        
