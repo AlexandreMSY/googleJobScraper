@@ -7,6 +7,7 @@ from googlejobscraper.containsnumber import containsNumber
 
 
 class GoogleJobScraper:
+    jobsFound = []
     url = str("https://www.google.com/")
     driver = webdriver.Chrome()
 
@@ -21,9 +22,6 @@ class GoogleJobScraper:
             else:
                 print("not job related")
 
-            while True:
-                pass
-
     # checks if search tag is a job related tag
     def __isJobRelatedTag(self) -> bool:
         jobsQuickResult = self.driver.find_elements(By.CLASS_NAME, "nJXhWc")
@@ -35,20 +33,23 @@ class GoogleJobScraper:
         moreJobsButton = self.driver.find_element(By.CLASS_NAME, "esVihe")
         moreJobsButton.click()
 
-        foundJobsList = self.driver.find_element(
+        scrollableJobList = self.driver.find_element(
             By.XPATH, '//*[@id="immersive_desktop_root"]/div/div[3]/div[1]'
         )
+        jobWebElements = []
+
+        # the lines below are resposible for scrolling down the job list on the left side of the page
 
         # Get scroll height.
         last_height = self.driver.execute_script(
-            "return arguments[0].scrollHeight", foundJobsList
+            "return arguments[0].scrollHeight", scrollableJobList
         )
 
         # https://stackoverflow.com/questions/48850974/selenium-scroll-to-end-of-page-in-dynamically-loading-webpage
         while True:
             # Scroll down to the bottom.
             self.driver.execute_script(
-                "arguments[0].scrollTo(0, arguments[0].scrollHeight)", foundJobsList
+                "arguments[0].scrollTo(0, arguments[0].scrollHeight)", scrollableJobList
             )
 
             # Wait to load the page.
@@ -56,7 +57,7 @@ class GoogleJobScraper:
 
             # Calculate new scroll height and compare with last scroll height.
             new_height = self.driver.execute_script(
-                "return arguments[0].scrollHeight", foundJobsList
+                "return arguments[0].scrollHeight", scrollableJobList
             )
 
             if new_height == last_height:
@@ -64,7 +65,13 @@ class GoogleJobScraper:
 
             last_height = new_height
 
-        print(self.__getJobDetails(foundJobsList.find_elements(By.TAG_NAME, "li")[10]))
+            jobWebElements = scrollableJobList.find_elements(
+                By.TAG_NAME, "li"
+            )  # clickable elements inside the scrollable list
+
+        for element in jobWebElements:
+            jobDetails = self.__getJobDetails(element)
+            self.jobsFound.append(jobDetails)
 
     # this method scrapes the job listing attributes such as job title, company and etc
     def __getJobDetails(self, element: WebElement) -> dict:
@@ -72,8 +79,8 @@ class GoogleJobScraper:
             element
         ).perform()
 
-        time.sleep(1)
-        
+        self.driver.implicitly_wait(1)
+
         jobDetailsDiv = self.driver.find_element(By.ID, "tl_ditsc")
         jobTitle = jobDetailsDiv.find_element(By.TAG_NAME, "h2").text
         company = jobDetailsDiv.find_element(
@@ -90,7 +97,20 @@ class GoogleJobScraper:
             "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[3]",
         ).find_elements(By.CLASS_NAME, "LL4CDc")
         contractDetails = {"salary": None, "contractType": None}
-        jobDescription = jobDetailsDiv.find_element(By.CLASS_NAME, "HBvzbc").text
+        
+        jobDescriptionDiv = jobDetailsDiv.find_element(
+            By.XPATH,
+            "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[4]",
+        )
+
+        showFullDescriptionButton = jobDescriptionDiv.find_elements(
+            By.XPATH,
+            "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[4]/div/div/div/div/g-expandable-content/span/div/g-inline-expansion-bar/div[1]/div",
+        )
+
+        # if show full description button exists
+        if len(showFullDescriptionButton) > 0:
+            showFullDescriptionButton[0].click()
 
         for element in contractDetailsDiv:
             if containsNumber(element.text):
@@ -109,21 +129,36 @@ class GoogleJobScraper:
             "location": location,
             "timePosted": timePosted,
             "contractDetails": contractDetails,
-            "jobDescription": jobDescription,
-            "url": self.__getShareLink()
+            "jobDescription": jobDescriptionDiv.text,
+            "url": self.__getShareLink(),
         }
 
     def __getShareLink(self) -> str:
         jobDetailsDiv = self.driver.find_element(By.ID, "tl_ditsc")
-        shareButton = jobDetailsDiv.find_element(By.XPATH, '/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[1]/div/span/span')
-        
+        shareButton = jobDetailsDiv.find_element(
+            By.XPATH,
+            "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[1]/div/span/span",
+        )
+
         webdriver.ActionChains(self.driver).move_to_element(shareButton).click(
             shareButton
         ).perform()
-        
-        sharePopUp = self.driver.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/span/div")
-        inputFieldValue = sharePopUp.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/span/div/div[3]/div[2]/div[3]/div/g-text-field/div[1]/div/input").get_attribute("value")
-        
+
+        sharePopUp = self.driver.find_element(
+            By.XPATH, "/html/body/div[3]/div/div[2]/span/div"
+        )
+
+        inputFieldValue = sharePopUp.find_element(
+            By.XPATH,
+            "/html/body/div[3]/div/div[2]/span/div/div[3]/div[2]/div[3]/div/g-text-field/div[1]/div/input",
+        ).get_attribute("value")
+
+        closePopUpButton = self.driver.find_element(
+            By.XPATH, "/html/body/div[3]/div/div[2]/span/div/span"
+        )
+
+        time.sleep(1)  # added in order to make interactions appear more human-like
+
+        closePopUpButton.click()
+
         return inputFieldValue
-        
-        
