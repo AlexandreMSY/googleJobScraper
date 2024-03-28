@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 import time
 from googlejobscraper.containsnumber import containsNumber
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class GoogleJobScraper:
@@ -72,14 +73,14 @@ class GoogleJobScraper:
         for element in jobWebElements:
             jobDetails = self.__getJobDetails(element)
             self.jobsFound.append(jobDetails)
+        
+        #print(self.jobsFound)
 
     # this method scrapes the job listing attributes such as job title, company and etc
-    def __getJobDetails(self, element: WebElement) -> dict:
+    def __getJobDetails(self, element: WebElement) -> dict:   
         webdriver.ActionChains(self.driver).move_to_element(element).click(
             element
         ).perform()
-
-        self.driver.implicitly_wait(1)
 
         jobDetailsDiv = self.driver.find_element(By.ID, "tl_ditsc")
         jobTitle = jobDetailsDiv.find_element(By.TAG_NAME, "h2").text

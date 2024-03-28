@@ -1,0 +1,970 @@
+
+ 
+Estágio na área de Programação Javascript - ECMA6
+ 
+
+ Deverá estar cursando: Ensino Superior em Ciência da Computação, Sistemas de Informação, TI ou afins. Atuar com desenvolvimento do Front-end do produto, desenvolvimento de melhorias e novas funcionalidades. Manter e gerenciar o sistema de captura de dados na internet. Conhecimentos em Javascript, ECMA6 e Linux. Conhecimentos opcionais em NodeJS, NPM, Babel, Gulp, Bower, Browserify, MDL, Jquery, design responsivo, GIT, Linux, pré processadores de CSS, Compass, Python, PHP e CI.
+
+ =====================================
+
+ 
+Estágio em Programação - Backend PHP, Javascript e Node
+ 
+
+ Resumo das atividades:
+• Executar programação, reprogramação de sistemas utilizando as linguagens: PHP, Node e Javascript
+• Realizar o planejamento de tarefas e entregas;
+• Organizar a documentação dos códigos desenvolvidos;
+• Auxiliar nas testagens, identificando falhas;
+• Auxiliar equipe nas demais tarefas ligadas ao TI.
+
+Características necessárias ao desempenho da função:
+• Organização, Disciplina;
+• Residir na Cidade de São Paulo (ter disponibilidade ao presencial na Vila Mariana);
+• Responsabilidade nas entregas (cumprimento de prazos);
+• Seguir os padrões estabelecidos;
+• Ter realizado cursos nas linguagens: PHP, Javascript e Node.
+
+ =====================================
+
+ 
+Estágio - Desenvolvimento WEB Front-End
+ 
+
+ Você deseja iniciar sua carreira profissional em uma empresa que oferece grandes oportunidades de crescimento e aprendizado? É automotivado e apaixonado por Tecnologia? A Class Solutions é o lugar certo para você.
+
+Somos uma empresa que atua no Desenvolvimento de Soluções e Serviços Profissionais de TI há mais de 19 anos e buscamos profissionais que desejam trabalhar na área de Desenvolvimento WEB Front-End iniciando sua jornada através do estágio para realizar atividades que trarão aperfeiçoamento profissional e ampliação de seus conhecimentos.
+
+Responsabilidades e atribuições
+
+Dentre as atividades que serão executadas em sua rotina de trabalho estão:
+
+Inicialmente, atuará em atividades de baixa e média complexidade para efetuar:
+• Implementação de novos desenvolvimentos e manutenções sob demanda;
+• Atendimento de demandas de clientes, buscando novas alternativas para as soluções.
+• Desenvolvimento de soluções em HTML, Javascript, Angular e Bootstrap.
+
+Requisitos e qualificações
+• Estar cursando o Ensino Superior em Ciências da Computação, Análise de Sistemas ou Desenvolvimento de Software;
+• Excelente Raciocínio Lógico;
+• Domínio da Língua Portuguesa;
+• Bom domínio do Inglês para Leitura, será um diferencial;
+• Ter automotivação, dedicação, comprometimento e disciplina;
+• Conhecimento de REACT, será um diferencial.
+
+Informações adicionais
+
+Benefícios:
+
+Bolsa auxílio, Vale Refeição, Vale Transporte, Alura, Seguro de Vida, GymPass e Assistência Odontológica
+
+ =====================================
+
+ 
+Estagiário JavaScript
+ 
+
+ Estamos num bom momento de crescimento, e com isso queremos ter mais dois ou três novos estagiários. É ai que você entra.
+
+Esta oportunidade é especialmente boa para estudantes que já estão estagiando e querem caminhar rumo a efetivação.
+
+Buscamos estudantes que já tenham aprendido o React ou o Node, ou seja, pode ter um foco mais de backend ou de frontend. Não precisa saber os dois, mas precisa conhecer bem UM deles.
+
+É importante, acima de tudo, gostar de desafios e ter disposição e coragem pra aprender. É bom que saiba se comunicar, pra gente conseguir interagir contigo também. 😄
+
+Uma vez na empresa estagiando, pensaremos "como efetivar este estagiário em no máximo uns oito meses".
+
+ =====================================
+
+ 
+(ESTÁGIO) DESENVOLVEDOR WEB / JAVASCRIPT - CÓD - 70387
+ 
+
+ Atividades a serem desenvolvidas:
+Cargo
+Estagiário de TI
+Descrição
+Auxiliar no desenvolvimento de automações em Javascript/Python.
+Cursos
+Análise de Sistemas;Desenvolvimento de Sistemas;Tecnologia em Análise e
+Desenvolvimento de Sistemas de Informação;Tecnologia em Produção
+Multimídia;Tecnólogo em Análise e Desenvolvimento de Sistemas;Tecnólogo em
+Desenvolvimento de Sistemas;Tecnólogo em Desenvolvimento de Software;
+Semestre
+3 Até:9
+Requisitos
+Estar cursando Superior na área de TI a partir do 3º semestre. Altamente desejável
+conhecimentos em PHP e desenvolvimento Web.
+Horários
+De segunda a sexta, 6h diárias à combinar.
+Benefícios
+Vale Transporte; Possibilidade de efetivação
+Descrição Cliente
+Empresa de gestão de softwares localizada na Av. Protásio Alves em Porto Alegre.
+Remuneração
+
+1200.00 Até:
+1200.00
+Localização
+RS
+Porto Alegre
+
+ =====================================
+
+ 
+Estágio dsenvolvedor FrontEnd
+ 
+
+ Estágio
+
+Sobre F1 Commerce
+
+F1 Commerce é uma empresa que atua no mercado de plataforma de ecommerce há mais de 14 anos no mercado.
+
+A empresa fornece soluções de ecommerce para empresas de grande porte, atendendo clientes como: JBL, Sanremo, Positivo, Compaq, VAIO, Alpar, Frahm dentre outros.
+
+Estágio Desenvolvimento FrontEnd HTML/CSS/JS
+
+A vaga é para atuação no desenvolvimento de interfaces de lojas virtuais.
+
+Localidade:
+
+Durante Pandemia:
+
+Remoto
+
+Pós Pandemia:
+
+Flexível
+
+Nível:
+
+Estágiário
+
+Contratação:
+
+Estágio
+
+Salário:
+
+R$ 1.200
+
+Carga Horária:
+
+Estágio: 30 horas / semana
+
+Benefícios:
+
+» Vale Alimentação ou Vale Refeição
+
+» Vale Transporte ou estacionamento
+
+» Seguro de vida
+
+» Auxílio Home Office (durante pandemia)
+
+» Desconto em Graduação, Pós-Graduação, Mestrado na UNISINOS
+
+Atividades:
+• Codificação de interfaces em HTML/CSS/JS para lojas virtuais a partir de layouts em AI/PSD/PNG
+
+Requisitos:
+• Disposição para enfrentar e implementar a criatividade de designers
+• Superior em curso (independente do semestre) ou curso técnico ligado a área
+• Capacidade de desenvolvimento HTML sem a utilização de software WYSIWYG
+• CSS
+• Software de corte e edição de imagens (Photoshop/Fireworks)
+• Javascript
+
+Requisitos obrigatórios:
+• Comprometimento
+• Bom humor
+• Dinamismo
+• Boa capacidade de relacionamento interpessoal (trabalho em equipe)
+• Vontade de aprender
+• Capacidade de concentração e foco na resolução de tarefas
+
+É Diferencial:
+• Ter trabalhado em projetos de e-commerce
+• Conhecimento / Noções de PHP
+
+ =====================================
+
+ 
+Estagiário em desenvolvimento de software
+ 
+
+ Enviar currículo para o e-mail rh@fastprobr.com
+
+Estágio em Campinas/SP - modalidade: híbrido (4 dias presenciais e 1 dia remoto)
+
+Descrição da vaga:
+
+- Colaborar com os desenvolvedores para o desenvolvimento de sistemas;
+
+- Desenvolver componentes web interativos e dinâmicos usando as melhores práticas de desenvolvimento.
+
+Área de atuação: Desenvolvimento de software.
+
+Requisitos: Javascript e css.
+
+Diferencial: React.Js, Next.js, Node.Js e Typescript.
+
+Benefícios: Bolsa-auxílio no valor de R$ 1.320,00; Vale Transporte de R$ 224,00 e Seguro de Vida.
+
+Carga horária semanal: 30 horas
+
+Venha fazer parte do futuro!
+
+ =====================================
+
+ 
+Estágio - Desenvolvimento WEB Full Stack
+ 
+
+ Você deseja iniciar sua carreira profissional em uma empresa que oferece grandes oportunidades de crescimento e aprendizado? É automotivado e apaixonado por Tecnologia? A Class Solutions é o lugar certo para você.
+
+Somos uma empresa que atua no Desenvolvimento de Soluções e Serviços Profissionais de TI há mais de 19 anos e buscamos profissionais que desejam trabalhar na área de Desenvolvimento WEB Front-End iniciando sua jornada através do estágio para realizar atividades que trarão aperfeiçoamento profissional e ampliação de seus conhecimentos.
+
+Responsabilidades e atribuições
+
+Dentre as atividades que serão executadas em sua rotina de trabalho estão:
+
+Inicialmente, atuará em atividades de baixa e média complexidade para efetuar:
+• Implementação de novos desenvolvimentos e manutenções sob demanda;
+• Atendimento de demandas de clientes, buscando novas alternativas para as soluções.
+• Desenvolvimento e aprendizado de soluções em HTML, Javascript, REACT, Back-end, Front End C#,SPFX
+
+Requisitos e qualificações
+• Estar cursando o Ensino Superior em Ciências da Computação, Análise de Sistemas ou Desenvolvimento de Software;
+• Excelente Raciocínio Lógico;
+• Domínio da Língua Portuguesa;
+• Bom domínio do Inglês para Leitura, será um diferencial;
+• Ter automotivação, dedicação, comprometimento e disciplina;
+• Conhecimento de REACT, será um diferencial.
+
+Informações adicionais
+
+Benefícios:
+
+Bolsa auxílio, Vale Refeição, Vale Transporte, Alura, Seguro de Vida, GymPass e Assistência Odontológica.
+
+Nós oferecemos serviços de Desenvolvimento de Soluções e Serviços Profissionais de TI há mais de 19 anos e somos parceiros Certificados Microsoft, Nível Gold, com 8 certificações diferentes, incluindo SharePoint, Microsoft 365 e Azure.
+
+Nossos serviços têm ajudado nossos clientes a aumentar o valor percebido de TI e resolver problemas e processos complexos de maneira simples e rápida. Nós entendemos as necessidades de nossos clientes para prover serviços e soluções sob medida.
+
+Comprometimento, Qualidade e Excelência Profissional são aspectos chave dos nossos serviços e de nosso sucesso. Para isso, contamos com uma equipe apaixonada e especialista em prover soluções utilizando de base as ferramentas e diversos métodos de adoção tecnológica utilizando o Microsoft 365 e Azure.
+
+Buscamos colaboradores apaixonados por tecnologia que desejam desenvolver uma relação de longo prazo conosco.
+
+Abaixo listamos alguns pontos que são necessários e outros que se destacam nos profissionais que estamos buscando:
+
+Profissionais de Desenvolvimento:
+• Buscamos profissionais de T.I. e Desenvolvedores com conhecimentos em Front-end, que estejam cursando ou tenham concluído o ensino superior em cursos correlatos à área;
+• Para desenvolvedores Front-End é indispensável conhecimento em CSS, Javascript, HTML, consumo de APIs e manipulação de JSON;
+• É desejável conhecimento em Bootstrap, JQuery, AngularJS, ReactJS, Typescript, SCSS, git;
+• Será considerado diferencial noções ou conhecimento de SharePoint;
+
+Profissionais de QA (Quality Assurance):
+• Estar cursando ou ter concluído o ensino superior em cursos correlatos à área;
+• Execução de testes funcionais caixa preta;
+• Execução de casos de testes;
+• Report de bugs;
+• Acompanhamento de bugs;
+• Desejável conhecimento em: Bootstrap, HTML 5, C#, ASP.NET;
+• Será considerado diferencial noções ou conhecimento de SharePoint;
+• Experiência nas atividades abaixo será considerada um diferencial:
+• Planejamento de Testes;
+• Elaboração de massa de testes;
+• Experiência com SharePoint;
+• Experiência com TFS;
+
+Profissionais de Suporte e Infraestrutura:
+• Estar estudando em nível superior, preferencialmente segundo ano, no máximo no terceiro;
+• Ter bom raciocínio lógico e noções em Inglês;
+• Ter noções de desenvolvimento de Software;
+• Será considerado diferencial noções ou conhecimento de SharePoint;
+
+Profissionais de Design e Marketing:
+• Buscamos profissionais de Design e Marketing com conhecimentos em desenho de interfaces, layouts, iconografia, e-mail marketing e prototipagem que estejam cursando ou tenham concluído o ensino superior em cursos correlatos à área e que possuam um portfólio online;
+• É indispensável o conhecimento das ferramentas Adobe Photoshop, Illustrator, XD, conhecimento e aplicação de conceitos de User Experience e possuir boa escrita;
+• É desejável conhecimento de Marketing para elaboração de campanhas, postagens em mídias sociais, e-mail marketing e elaboração de textos;
+• Conhecimentos de edição de vídeo em Adobe Premiere e After Effects é um diferencial;
+
+Somos especialistas em Microsoft 365
+
+Grandes empresas que confiam em nosso trabalho:
+
+Confira o nosso termo de consentimento para tratamento de dados através da postagem em nosso site oficial: Termo de Consentimento.
+
+Estamos localizados na Rua Augusta, 1939
+
+Cerqueira César - 01413-000
+
+São Paulo - SP
+
+ =====================================
+
+ 
+Estagiário JavaScript querendo se tornar Junior
+ 
+
+ Estamos em um momento de crescimento e estamos com vagas para novos estagiários em nosso time. Esta oportunidade é boa para estudantes que já estão estagiando e querem caminhar rumo a efetivação.
+
+Buscamos estudantes que já tenham aprendido o React ou o Node, ou seja, pode ter um foco mais de backend ou de frontend. Não precisa saber os dois.
+
+É preciso estar um ano ou menos de se formar, e é preciso se dedicar para ser efetivado até sua formatura.
+
+É importante, acima de tudo, querer aprender, saber se comunicar e gostar de desafios.
+
+ =====================================
+
+ 
+Estágio – Desenvolvimento Frontend – Porto Alegre – RS – RS
+ 
+
+ Atribuições:
+
+Estamos buscando estudante de ensino superior para posição de estagiários para a área de desenvolvimento web de empresa de TI. Nosso cliente é uma consultoria de TI, que possui times de desenvolvimento Frontend e com Java, e prima pelo desenvolvimento de sua equipe. A Combinar Requisitos:
+
+Experiência com Frontend; Ferramentas:
+
+HTML, CSS javascript; Desejável vivência com angular, reactjs. Carga Horária:
+
+Jornada de Trabalho:
+A combinar.
+
+ =====================================
+
+ 
+Estágio em Node Js
+ 
+
+ **Requisitos desejáveis**:
+Conhecimento na linguagem Node.JS e JavaScript;
+Conhecimento em linguagem SQL;
+Desejável React.JS.
+• *Atividades a serem desenvolvidas**:
+Desenvolvimento de sistemas.
+
+Tipo de vaga: Estágio / Trainee
+Duração do contrato: 12 meses
+
+Salário: R$1.000,00 - R$1.200,00 por mês
+• *Benefícios**:
+
+- Vale-alimentação
+- Vale-refeição
+- Vale-transporte
+
+Horário de trabalho:
+
+- De segunda à sexta-feira
+
+Pergunta(s) de seleção:
+
+- Possui conhecimento em Node.JS e JavaScript?
+
+ =====================================
+
+ 
+Estágio Desenvolvimento Web
+ 
+
+ Introduction
+
+Your Role and Responsibilities
+O programa de estágio do laboratório de IBM Research no Brasil permite o envolvimento direto com pesquisa e desenvolvimento de tecnologia de alto nível.
+
+Desenvolvimento de Aplicações Web usando frameworks JavScript (React, Vue, etc.) e HTML5. A soluções se integram com os mais diversos serviços da IBM Cloud para entregar uma experiência única para o nosso usuário.
+
+Todas as nossas vagas são elegíveis para pessoas com Deficiencia !
+
+Required Professional and Technical Expertise
+Cursos - TI em Geral
+
+Conhecimentos em HTML & CSS (Bootstrap, Materialize, React, Angular, etc. é um diferencial). Noções de Javascript ES6+, Banco de Dados Não Relacional. Criação de interfaces responsivas e usablidade. Interesse e motivação em aprender novas tecnologias.
+
+Preferred Professional and Technical Expertise
+Trabalhar com desenvolvimento de aplicações web responsivas, especificação e criação de UI/UX.
+
+About Business Unit
+
+Your Life @ IBM
+
+About IBM
+
+Location Statement
+
+Being You @ IBM
+A IBM é comprometida com a criação de um ambiente diverso e tem orgulho de ser uma empregadora de oportunidades iguais. Todos os candidatos qualificados serão considerados para a vaga, sem considerar a raça, cor, religião, sexo, identidade ou expressão sexual, orientação sexual, nacionalidade, genética, deficiência, idade ou status como veterano. A IBM também está comprometida com o cumprimento de todas as práticas trabalhistas justas com relação ao status de cidadania e imigração
+
+ =====================================
+
+ 
+Estágio - Full Stack Developer
+ 
+
+ DESCRIÇÃO DA VAGA
+
+Estudante de curso superior na área de tecnologia, e conhecimento de conceitos básicos como estrutura de dados, algoritmos e orientação a objetos. Desejável familiaridade com git e Bancos de Dados relacionais.
+
+RESPONSABILIDADES E ATRIBUIÇÕES
+
+Você irá integrar a equipe de engenharia da Grão Direto, que utiliza metodologia ágil de desenvolvimento na entrega de produtos de alta tecnologia. Nossos engenheiros atuam tanto em frontend quanto backend durante todo o ciclo de vida da solução, e encaram desafios complexos na computação em larga escala, utilizando habilidades em estruturas de dados, algoritmos e programação orientada a objetos. Nosso time é colaborativo por natureza, e você terá voz ativa durante todo o processo, sempre com o objetivo de construir produtos que promovam excelentes experiências para nossos clientes.
+
+REQUISITOS E QUALIFICAÇÕES
+
+ITENS OBRIGATÓRIOS
+• Ter o jeito GRÃO DIRETO de ser. Clique e saiba mais: www.graodireto.com.br/vagas ;
+• Conhecimento de conceitos básicos como estrutura de dados, algoritmos, orientação a objetos, etc;
+• Conhecimento em estrutura e consulta em Bancos de Dados relacionais.
+• Linguagens de desenvolvimento web HTML/CSS/Javascript.
+• Habilidade para comunicação e escuta ativa.
+
+DIFERENCIAIS
+• Experiência em desenvolvimento de aplicações WEB, seja frontend ou backend.
+• Experiência em boas práticas de desenvolvimento de software, como TDD, Clean Code, Padrões de Projeto e SOLID;
+• Experiência nas linguagens Angular, node.js e Ionic.
+• Experiência em banco de dados mySql (criação de views, procedures, functions, etc).
+• Contato com ambiente em nuvem Amazon AWS.
+• Vivência de cultura devops e automação de tarefas de integração e entrega.
+• Conceitos de metodologias ágeis (Scrum/Kanban).
+• Inglês intermediário.
+
+INFORMAÇÕES ADICIONAIS
+
+Modalidade: Presencial
+
+BENEFÍCIOS
+
+Existe sim ALMOÇO GRÁTIS! ;)
+
+(Dois restaurantes conveniados para você escolher seu almoço todos os dias).
+
+INDIQUE alguém para deixar nosso time ainda mais incrível!
+
+(Bônus se você indicar um ótimo talento e ele for contratado para a nossa equipe).
+
+Apoiamos seu BEM-ESTAR com bônus mensal!
+
+(Nós incentivamos que você pratique atividades físicas, de saúde mental, religiosas ou de voluntariado. Fez 16 horas por mês receberá 10% de bônus, de 8 horas à 15 horas receberá 5% de bônus!).
+
+SOBRE A GRÃO DIRETO
+
+Assim como a Uber revolucionou o mercado de transporte, o Nubank o mercado bancário e várias outras startups mudaram seus respectivos mercados, a Grão Direto revoluciona o agronegócio conectando toda a cadeia de comercialização. Através da tecnologia, vendedores e compradores podem negociar grãos de forma muito mais rápida e eficiente, tornando a compra e venda de milho, soja, sorgo e outros grãos muito mais moderna e segura
+
+ =====================================
+
+ 
+Estagio - Desenvolvedor Frontend
+ 
+
+ Função: Estagio – Desenvolvedor Frontend
+
+Enviar com Titulo da Vaga
+• Oportunidade@prax.net.br;
+• Trabalho Presencial (Uberlândia);
+• Horário comercial
+• Bolsa R$ 1.200,00
+• Vale Transporte.
+
+Perfil
+
+· Profissional Proativo;
+
+· Auto ditada;
+
+· Possua boa comunicação;
+
+· Perfil de Desenvolvedor;
+
+Pré-Requisitos
+
+· Estar regularmente matriculado em curso superior na área de Tecnologia;
+
+· Possua cursos extra curriculares em desenvolvimento de sistemas;
+
+· Experiência mínima de 1 ano com desenvolvimento de sistemas em linguagens como: Vue.JS, Angular, React, Node.JS, Java Script e/ou Type Script;
+
+· Possua noção de banco de dados noSQL (MongoDB, Elastic);
+• ·Possua noção de Banco de dados relacional;
+
+ =====================================
+
+ 
+Programador JavaScript Junior
+ 
+
+ Estamos em um momento de crescimento da empresa, e então criando novos times de desenvolvedores, para trabalhar em projetos nossos e de nossos clientes.
+
+Para esta oportunidade em especial, buscamos devs que realmente tenham skills em React ou Node. Não é preciso ser bom nos dois, mas precisa mesmo ser bom em um deles. O JavaScript é fundamental em todo caso.
+
+## Se seu foco for backend
+
+Se o servidor, a API, o banco de dados e as regras de negócios são as partes que você mais se identifica, então o backend é sua praia.
+
+### Requisitos
+- Saber trabalhar com Node
+- Saber trabalhar com MySql ou Postgres
+- Testes automatizados
+
+### São diferenciais
+- Adonis.js
+- TypeScript
+- Docker
+- Saber realizar deploys ou manter um servidor
+
+## Se seu foco for frontend
+
+Se pra você o navegador é a parte mais importante, com a interface para o usuário, a usabilidade, a adequação do projeto para vários tipos e tamanhos de telas, então o frontend é seu ponto forte.
+
+### Requisitos
+- Saber trabalhar com React ou React Native
+- Ter estudado Redux
+- Conhecer bem CSS e responsividades
+
+### São diferenciais
+- Styled Components
+- Storybook
+- Cypress
+- PWA
+- TypeScript
+- Next.js
+
+ =====================================
+
+ 
+Estagiário em Desenvolvimento Front-End
+ 
+
+ # Informações gerais: -> home office; -> horário comercial; -> bolsa estágio compatível com o mercado; -> 30h semanais; -> vaga de estágio com pretensão de efetivação. # Responsabilidades: Auxiliar nas seguintes atividades: análise, prototipação e desenvolvimento de software (BACK-END/ FRONT-END). # Requisitos: ?Para dar #match você precisa ter vivência e/ou dispor de conhecimento em: Linguagem de Programação: Java Script CSS HTML Diferenciais: jQuery; conhecimento em metodologias ágeis; conhecimento de gestão de versionamento de código (GIT). # AVISO Serão considerados os currículos enviados até a data de 01/03/2024. Não deixe de se candidatar até esta data. Boa sorte!! Domínio em HTML, Domínio em CSS, Domínio em JAVASCRIPT
+
+ =====================================
+
+ 
+Estágio JavaScript rumo à efetivação
+ 
+
+ Estamos em constante movimento, efetivamos um estagiário recentemente e com isso optamos por abrir espaço para dois ou três novos estagiários.
+
+Esta oportunidade é especialmente boa para estudantes que já estão estagiando e querem caminhar rumo a efetivação.
+
+Buscamos estudantes que já tenham aprendido o React ou o Node, ou seja, pode ter um foco mais de backend ou de frontend. Não precisa saber os dois, mas precisa conhecer bem um deles.
+
+É importante, acima de tudo, querer aprender, saber se comunicar e gostar de desafios.
+
+Uma vez na empresa estagiando, pensaremos "como efetivar este estagiário em no máximo oito meses".
+
+ =====================================
+
+ 
+Estágio desenvolvedor(a) web
+ 
+
+ Você já pensou em trabalhar em um dos maiores centros de Pesquisa & Desenvolvimento do país, participando de grandes projetos que podem impactar a vida de milhões de pessoas?Junte-se a nós!Atividades:Nesta oportunidade você apoiará a construção de novos softwares/produtos de uma grande empresa multinacional, na construção de software web, com foco nas seguintes atividades: Desenvolvimento de FrontendDesenvolvimento de BackendDesenvolvimento de Testes AutomatizadosParticipar de pro
+
+ =====================================
+
+ 
+Estágio em desenvolvimento de SW para Desktop (C++/TypeScript ou JavaScript/C#)
+ 
+
+ Descrição da vaga
+
+Se você tem o espírito criativo e inovador e quer trabalhar em um dos maiores institutos de ciência e tecnologia do Brasil essa é a sua chance! Venha conhecer o SiDi, e saiba mais sobre esta oportunidade. Estamos em busca de profissionais proativos, dinâmicos, comunicativos, e que gostem de trabalho em equipe, para fazerem parte do nosso time de #SiDiers. Temos uma nova oportunidade em aberto para estagiário de desenvolvimento de Software. Venha fazer parte desta equipe no desenvolvimento de projetos globais e inovadores para a plataforma Windows! 
+
+Responsabilidades e atribuições
+• Participar de todo o ciclo de desenvolvimento: avaliação de requisitos, arquitetura, codificação, verificação, manutenção.
+• Realizar investigações técnicas para verificar a viabilidade do desenvolvimento de funcionalidades inovadoras.
+• Trabalhar em ambiente colaborativo e dinâmico atuando em equipes virtuais com o uso de metodologias de desenvolvimento ágeis.
+• Vivenciar e aprender mais sobre boas práticas de desenvolvimento de software, tais como programação em pares, revisão de código e análise de bibliotecas de código aberto.
+
+Requisitos e qualificações
+
+O que esperamos de você 
+• Conhecimentos em uma das linguagens de programação: C++/C#/C
+• Entendimento em orientação a objetos
+• Aptidão em desenvolvimento do software (preferencialmente aplicativos/desktop)
+
+Será considerado um diferencial ter conhecimento em:
+• TypeScript ou JavaScript, Polymer ou Angular
+• Desenvolvimento em Python;
+• Desenvolvimento de aplicativos Windows (.Net, WPF, UWP, XAML);
+• Padrões de projeto;
+• Metodologias de desenvolvimento ágeis;
+• Análise de desempenho, uso de ferramentas de análise de desempenho;
+• Ferramentas de gerência de configuração tais como Git.
+
+Informações adicionais
+
+Oportunidade para Campinas-SP em regime de estágio híbrido
+
+O que esperamos de todos os #SiDiers:
+
+Abrir a mente para o novo
+
+Manter diálogo aberto e direto
+
+Desenvolver-se continuamente
+
+Fazer o melhor, sempre
+
+Construir em parceria
+
+Pensar grande, fazer rápido
+
+O que oferecemos?
+
+• Bem-Estar: Seguro de Vida, Gympass e Ginástica Laboral;
+
+• Saúde: Convênio Médico e Odontológico e Suporte Psicólógico;
+
+• Alimentação: Vale Refeição ou Vale Alimentação;
+
+• Transporte: Estacionamento ou fretado ou Vale-Transporte;
+
+• Diversidade: Comitês sobre Bem-estar, Diversidade, Saúde Mental, Social, Sustentabilidade e Inclusão das mulheres na tecnologia
+
+• Escritórios Modernos: Ambientes descontraídos e colaborativos com espaços de convivência, copas, máquina de café e sanacks, etc
+
+• Ainda quer mais? Dezenas de parcerias com benefícios e descontos!
+
+Para nós, inclusão não é apenas somar mais um ao nosso time, é somar diferenças e particularidades. É justamente dessa mistura de técnicas, habilidades e histórias que nos inspiramos para fazer diferentes pontos de vista olharem para um mesmo horizonte, sempre para frente.
+
+Trabalhamos em um ambiente de oportunidades iguais, independente de gênero, orientação sexual, religião ou deficiência.
+
+Todas as nossas vagas estão disponíveis para PCDs.
+
+CÓDIGO DA VAGA: 2117 N1
+
+ =====================================
+
+ 
+Estágio de Desenvolvimento
+ 
+
+ O Reportei está em um processo de crescimento e está em busca de talentos que estejam dispostos a crescer junto com a empresa.
+
+Esta vaga é direcionada àqueles que já têm alguma intimidade com o código mas que sabem que podem ir além e buscam uma oportunidade de aplicar teoria à prática em problemas reais para resolver problemas de clientes.
+
+ =====================================
+
+ 
+Estágio Desenvolvedor Frontend
+ 
+
+ ESTAGIÁRIO DESENVOLVEDOR FRONTEND
+
+PERFIL DO CANDIDATO:
+• Conhecimentos em Desenvolvimento Frontend: HTML, CSS, JAVASCRIPT, BOOTSTRAP, JQUERY, ANGULARJS, NODEJS, VUE.JS.
+• Conhecimentos em Desenvolvimento Mobile: REACT NATIVE, ANDROID STUDIO.
+• Conhecimentos em Desenvolvimento Geoprocessamento: LEAFLET, GEOJSON, OPEN STREET MAP.
+• Conhecimento com o ambiente de Desenvolvimento: LINUX, GIT, VSCODE, GITHUB, JENKINS, DOCKER.
+• Metodologias de experiência do usuário (UX) e interface do usuário (UI).
+
+DESCRIÇÃO DAS ATIVIDADES:
+• Desenvolver melhor a camada frontend da aplicação incluindo cores, textos, animação e imagens, e como se relacionam ao navegar pelo sistema.
+• Criar ideias e soluções para a interface do sistema com metodologias UI/UX DESIGNER focado na jornada e experiência do usuário.
+
+INFORMAÇÕES ADICIONAIS:
+
+A empresa atua no segmento de fontes de serviços de consultoria e desenvolvimento territorial, localizado no bairro Aldeota, em Fortaleza/CE.
+
+Oferece bolsa + VT e oportunidade de crescimento.
+
+Tipo de vaga: Estágio / Trainee
+Duração do contrato: 12 meses
+
+Salário: R$900,00 por mês
+
+Benefícios:
+• Vale-transporte
+
+Horário de trabalho:
+• De segunda à sexta-feira
+
+Experiência:
+• Desenvolvimento de Software (Preferencial)
+• Desenvolvedor Front-end (Preferencial)
+
+Local do trabalho: Presencial
+
+ =====================================
+
+ 
+Estágio para Programador Web - Natal
+ 
+
+ A Tecnotech Sistemas contrata estagiário para cargo de Programador Web
+
+Requisitos:
+
+- Conhecimento médio de HTML, CSS, AJAX, XML, JSON, Javascript e JQuery.
+
+- Conhecimento médio de PHP (Orientado a Objeto) e experiência mínima comprovada de 1 ano.
+
+- Conhecimento em banco de dados, preferência PostgreSQL.
+
+- (Diferencial) Conhecimento em padrões de projeto MVC, outros...
+
+- (Diferencial) Conhecimento em frameworks e bibliotecas (ex: geração de relatorios PDF, Webservices, etc.).
+
+- (Diferencial) Conhecimento em controle de versÃ£o, preferência GIT.
+
+- (Diferencial) Conhecimento em bug tracker/issue tracker, de preferência Redmine.
+
+- Fundamental ter bom senso estético, boa organização, facilidade em seguir processos e padrões e ter espirito colaborativo.
+
+- Alunos dos cursos da área de tecnologia (Sistemas de Informação, Ciências da Computação, Engenharia da Computação e afins)
+
+ =====================================
+
+ 
+Estagiário PHP
+ 
+
+ O estagiário trabalhará diretamente com funcionalidades e otimização do aplicativo. O estudante ao longo do estágio ganhará uma visão completa de como gerenciar e construir um produto que atende milhares de clientes todos os dias.
+
+Para iniciar você precisa de ter conhecimentos de PHP (Laravel), Javascript e o noções de frontend (HTML/CSS). Ao longo do estágio você terá a oportunidade de aprender e masterizar outras tecnologias como APIs de diversos serviços, NodeJS, VueJS, TypeScript, banco de dados, etc.
+
+ =====================================
+
+ 
+ESTÁGIO DESENVOLVEDOR WEB/JAVASCRIPT - PORTO ALEGRE - CÓD. 70387
+ 
+
+ Análise de Sistemas;Desenvolvimento de Sistemas;Tecnologia em Análise e Desenvolvimento de Sistemas de Informação;Tecnologia em Produção Multimídia;Tecnólogo em Análise e Desenvolvimento de Sistemas;Tecnólogo em Desenvolvimento de Sistemas;Tecnólogo em Desenvolvimento de Software;
+
+Estar cursando Superior na área de TI a partir do 3º semestre. Altamente desejável conhecimentos em PHP e desenvolvimento Web.
+
+De segunda a sexta, 6h diárias à combinar.. Cargo: ESTÁGIO DESENVOLVEDOR WEB/JAVASCRIPT - PORTO ALEGRE - CÓD. 70387 | Salario: R$ 1.200,00. | Ensino: . | Turno: Por Escala. | Area: Informática. | Experiencia: . | Cidade: Porto Alegre / RS
+
+ =====================================
+
+ 
+Estagiário wordpress + laravel
+ 
+
+ Buscamos um estagiário em desenvolvimento com experiência em desenvolvimento WordPress e PHP.
+
+As funções dessa vaga incluem:
+- Ajustes e pequenos fixes em bugs reportados nos nossos produtos;
+- Manutenção dos sites dos produtos e demais sites da empresa;
+- Desenvolvimento de soluções simples em PHP/WordPress/Laravel para soluções internas da empresa.
+
+A maior parte dos nossos clientes está no exterior, então é desejável conhecimento de leitura/escrita pelo menos intermediário em inglês.
+
+ =====================================
+
+ 
+Estagio em programacao javascript node js react js
+ 
+
+ Colaborar no desenvolvimento de baplicacoesb web utilizando javascript node js e react js estudante de graduacao em ciencia da computacao engenharia de
+Requisitos
+
+Você descobrirá que um trabalho de equipe na empresa pode ajudá-lo(a) a crescer com um treinamento de alto nível, bem como nossos programas de educação e oportunidades que oferecem. Nossa empresa pode levá-lo a qualquer lugar e, ao mesmo tempo, oferecer os benefícios de que você precisa para sua vida e carreira profissional.
+Características Recomendadas
+• Gentileza
+• Adaptabilidade
+• Comunicação
+• Iniciativa
+• Curiosidade
+• Flexibilidade
+• Competitividade
+• Agilidade
+Envio de Currículo
+
+Observe atentamente na página de inscrição da vaga de emprego como se faz o envio do currículo.
+
+ =====================================
+
+ 
+(ESTÁGIO) DESENVOLVEDOR WEB / JAVASCRIPT – CÓD – 70387 em Porto Alegre/RS
+ 
+
+ Vaga de Emprego em Porto Alegre – RS
+
+Vaga de: (ESTÁGIO) DESENVOLVEDOR WEB / JAVASCRIPT – CÓD – 70387 em Porto Alegre/RS
+
+Empresa: Busco Empregos
+
+Sobre a Vaga Análise de Sistemas;Desenvolvimento de Sistemas;Tecnologia em Análise e Desenvolvimento de Sistemas de Informação;Tecnologia em Produção Multimídia;Tecnólogo em Análise e Desenvolvimento de Sistemas;Tecnólogo em Desenvolvimento de Sistemas;Tecnólogo em Desenvolvimento de Software;
+
+Semestre
+
+3 Até:9
+
+Requisitos
+
+Estar cursando Superior na área de TI a partir do 3º semestre. Altamente interessado em conhecimentos em PHP e desenvolvimento Web.
+
+Horários
+
+De segunda a sexta, 6h diárias à combinação.
+
+Benefício
+
+Vale Transporte; Possibilidade de efetivação
+
+Descrição Cliente
+
+Empresa de gerenciamento de softwares localizada na Av. Protásio Alves em Porto Alegre.
+
+Remuneração
+
+1200,00 Até: 1200,00
+
+Localização
+
+RS
+
+Porto Alegre
+
+Nível hierárquico: Estagiário
+
+Remuneração: De R$ 1.000,01 a R$ 1.500,00
+
+Benefícios:
+• Vale-transporte (VT)
+
+Forma de contratação: Estágio
+
+Quantidade de vagas: 1
+
+Turno: Manhã e Tarde
+
+Pré-requisitos:
+• Formação mínima em Ensino Superior Incompleto – Bacharelado | Licenciatura | Tecnologia
+
+Quero esta vaga de emprego
+
+Oportunidades semelhantes
+
+Porto Alegre/RS
+
+Porto Alegre/RS
+
+Porto Alegre/RS
+
+Porto Alegre/RS
+
+Porto Alegre/RS
+
+×Fechar
+
+Denuncie esta vaga
+
+Vaga ID 1057703 – (ESTÁGIO) DESENVOLVEDOR WEB / JAVASCRIPT – CÓD – 70387
+
+Enviar Denúncia Desistir
+
+© 2021 OEmprego.com.br. Todos os direitos reservados.
+
+Usamos cookies 🍪 para garantir que você obtenha a melhor experiência em nosso site.
+
+Salário: 1000.01 – 1500 per month
+
+Localização: Porto Alegre – RS
+
+Candidate-se ao emprego agora: https://jobviewtrack.com/pt-br/job-1f1b41685e10accf401d4f432c041d020b561b041f164e444f0d7a010d6c631153060617010b134510071b537d4e5f2f7a010d4e701142612d121aa4c4471d0749244f493f685e10accf401d4f432c041d020b561b041f164e444f2c1c55575f1f41/b5c0a4a4c5ac13b2d0499debc884c83e.html?affid=a662b16af97caa6d5796597a0e04fecb
+
+ =====================================
+
+ 
+Estágio na área de Programação PHP
+ 
+
+ Deverá estar cursando: Ensino Superior em Computação. Atuação com programação PHP / MYSQL, com suporte aos colaboradores da área e apoio com anormalidades. Conhecimentos técnicos em PHP, IDE de programação PhpStorm, MySQL, XML, HTML, CSS, JavaScript, jQuery e Ajax. Pontualidade, interesse / dedicação exclusiva para a área de atuação, fluência em português, polidez e proatividade.
+
+ =====================================
+
+ 
+Estagiário Javascript - React e Node
+ 
+
+ O estágio é a porta de entrada da empresa para um estudante, que virá aprender como escrever códigos de qualidade e seguir os padrões acordados pela empresa. Quando buscamos um estagiário, queremos estudantes com sede de aprendizado! Queremos pessoas que gostem de aprender, que gostem de desafios e que valorizem trabalhar com uma boa equipe.
+
+Nossa meta é formar o "estagiário completo", que tem código bem escrito, testado e validado, que siga os padrões estabelecidos e garante que suas implementações funcionam como esperado.
+
+Remoto ou presencial? Você decide.
+
+No final de semana dos dias 3 e 4 de outubro, iremos ministrar um Bootcamp de TypeScript com React, pelo Google Developers Group Juiz de Fora (GDGJF), e você estando no processo, será nosso convidado especial.
+
+ =====================================
+
+ 
+Estágio em Desenvolvimento Back- End: Node Js
+ 
+
+ Deverá estar cursando: Ensino Superior completo com pós graduação. Auxiliar no desenvolvimento de serviços web em NodeJS; aprender sobre o desenvolvimento Back-End Web e demais tecnologias utilizadas na empresa. Aprender sobre os modelos de negócio startup. Experiência ou familiarização com a linguagem de programação JavaScript, desejável possuir noções de MongoDB e noções de banco de dados. Conhecimento básico em inglês, conhecimento em alguma tecnologia.
+
+ =====================================
+
+ 
+Desenvolvedor Javascript (REMOTO)
+ 
+
+ Desenvolver plugins para a plataforma Bubble, sempre relacionado ao front-end (web).
+
+Por exemplo implementar elementos como mapa Leaflet, novas funcionalidades como criação de arquivos PDF e diversas outras, incluindo construção de interfaces visuais para APIs externas e mais.
+
+Para deixar claro: não sou o proprietário da plataforma Bubble e sim uma empresa criadora independente de plugins.
+
+Benefícios: a combinar
+
+Requisitos Necessários:
+HTML, CSS, Javascript com no mínimo 1 ano de experiência.
+Leitura e escrita em inglês fluentes.
+Desejável: Node.js (serverless).
+
+ =====================================
+
+ 
+Desenvolvedor Frontend
+ 
+
+ Descrição Geral:Vaga para estágio remunerado. Conhecimentos básicos:
+- Html, css, javascript.
+
+Desejável:
+- Conhecimento de angular, react;
+- Conhecimento de frameworks (laravel, yii, cake, zend);
+- Php;
+- Mvc;
+- Mysql.
+
+ =====================================
+
+ 
+Estágio em Desenvolvimento Front-End
+ 
+
+ Deverá estar cursando: Ensino Superior cursando em Engenharia da Computação, Automação, Elétrica ou outros cursos focados em Sistemas da Informação. Programar interfaces de Web e ferramentas de edição de imagem. Executar a manutenção dos sistemas, fazendo eventuais correções necessárias. Desenvolver trabalhos de montagem, depuração e testes de programas, executando serviços de manutenção nos programas já desenvolvidos. Ter boas habilidades com JavaScript, HTML e CSS. Ser atento aos detalhes, layout e usabilidade.
+
+ =====================================
+
+ 
+Estágio na área de Desenvolvimento Fullstack NodeJS
+ 
+
+ Deverá estar cursando: Ensino Técnico / Superior em Sistemas de Informação, Engenharia ou áreas relacionadas. Apoio no desenvolvimento de aplicações web, mobile e API. Participação no time de marketing para sugestão e implementação de melhorias para crescimento dos principais KPIs Noções de algoritmos, HTML5, CSS3 e JavaScript. Conhecimentos em backend NodeJS com Express e MongoDB.
+
+ =====================================
+
+ 
+Estágio em Front-End
+ 
+
+ Deverá estar cursando: Ensino Superior em Engenharia da Computação, ou Sistema da Informação. Auxiliar na programação e análise de sistemas, auxiliar na aplicação da identidade virtual do sistema e auxiliar na manutenção da responsividade do sistema. Conhecimento intermediário em PHP, HTML, CSS, Bootstrap, JavaScript. Conhecimento desejável em Java e JavaFx.
+
+ =====================================
+
+ 
+Estágio Desenvolvedor Front End
+ 
+
+ Estágio Desenvolvedor Front End Local: Belo Horizonte, MG. Requisitos: - Conhecimentos em HTML, CSS e JavaScript; - Cursando Graduação na área de TI. Bolsa: a combinar.
+
+ =====================================
