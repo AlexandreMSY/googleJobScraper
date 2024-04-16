@@ -25,8 +25,8 @@ class JobDescriptionParser:
             {jobDescription}
         """
         response = self.model.generate_content(generateContentMessage).text
-        formattedResponseText = response.replace("```", "").replace("json", "")
+        formattedResponseText = response.replace("```", "").replace("json", "").replace("JSON", "")
 
-        # print("test", formattedResponseText)
+        print("test = ", formattedResponseText)
 
         return json.loads(formattedResponseText)  # converts string to json
