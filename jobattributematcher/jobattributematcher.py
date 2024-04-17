@@ -1,6 +1,6 @@
 from typing import Type
 from user.userdetails import User
-from jobattributematcher.arraywordcounter import arrayWordMatcher
+from jobattributematcher.arraywordmatcher import arrayWordMatcher
 
 
 class JobAttributeMatcher:
