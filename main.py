@@ -7,23 +7,81 @@ from jobattributematcher.jobattributematcher import JobAttributeMatcher
 parser = JobDescriptionParser("AIzaSyBznU6qeVaqrVTP08JbXqjXDQXr6qz4RjU")
 test = parser.parseJobDescription(
     """
-        ATIVIDADES: A pessoa estagiária será treinada para atuar com várias linguagens de programação, em atividades full stack e agindo em diferentes projetos com a supervisão de um Analista. Atuará com Flutter; Swift; Kotlin; C#.net; Node.js; Angular e JavaScript em sistemas de recomendação e Data Science, além de arquiteturas distribuídas com aplicativos.
+        Por que fazer parte do #PosiTime?
 
-        REQUISITOS: Inglês nível técnico (Será testado posteriormente); Conhecimento em lógica de programação; Máquina para trabalhar de casa
+        Acreditamos que a tecnologia existe para impulsionar vidas, por isso, todos os dias construímos novas soluções que tornam a vida das pessoas melhor e mais inteligente! Ágeis, vibrantes, ousados, inovadores, diversos, conectados, dinâmicos, empreendedores e resilientes: mais que uma equipe, somos o #PosiTime.
 
-        DEVERÁ ESTAR CURSANDO: Deve estar no PENÚLTIMO ou ÚLTIMO ano dos seguintes cursos: Análise e Desenvolvimento de Sistemas; Ciência da Computação; Engenharia de Software ou Sistemas da Informação.
+        Se você se identifica com o nosso propósito, e procura um lugar para crescer e somar, te esperamos de braços abertos!
 
-        BENEFÍCIOS: Tíquete Refeição
+        Responsabilidades e atribuições
 
-        REGIME DE CONTRATAÇÃO: Estágio
+        Atender a fila de chamados da Segurança da Informação no Portal de Atendimento;
 
-        INFORMAÇÕES ADICIONAIS: Jornada de segunda a sexta, por 30 horas semanais. Atuação home-office. Possibilidade de efetivação. Bolsa auxílio e VR de R$600,00.
+        Efetuar o controle das licenças dos softwares da companhia;
 
-        IDIOMAS: Inglês - Intermediário
+        Manutenção e concessão de acesso aos principais sistemas da companhia entre;
+
+        Orientar e fornecer suporte quanto à utilização adequada de sistemas e condutas de Segurança da Informação;
+
+        Manutenção da documentação de procedimentos e portal de segurança da informação;
+
+        Atuar com a manutenção dos ativos da empresa.
+
+        Requisitos e qualificações
+
+        Cursando Análise de sistemas, Gestão de TI, CiberSegurança e áreas correlacionadas;
+
+        Pacote Office Intermediário;
+
+        Conhecimentos em manutenção de equipamentos e atendimento remoto, será considerado um diferencial;
+
+        Disponibilidade para atuar em horário comercial de segunda à sexta-feira de forma presencial em SP.
+
+        Há mais de três décadas quebramos barreiras, conquistamos o mercado e alcançamos lares de milhões de brasileiros. Fazem parte do nosso portfólio computadores, tablets, smartphones, celulares e dispositivos de telemedicina, além de equipamentos para escolas de mais de 40 países.
+
+        O Propósito que nos move é TORNAR A VIDA DAS PESSOAS MELHOR E MAIS INTELIGENTE COM O USO DA TECNOLOGIA.
+
+        Somos Great Place to Work (GPTW), certificação concedida a empresas reconhecidas internacionalmente como as melhores para se trabalhar, a partir de avaliações feitas pelos próprios colaboradores. Estamos há 3 anos consecutivos certificados pela GPTW.
+
+        Conheça mais sobre nossa cultura. Siga a página da Positivo no Linkedin: www.linkedin.com/company/positivo-tecnologia
+
+        Buscamos profissionais que se identificam com o nosso jeito de SER e FAZER
+
+        VALORIZAMOS AS NOSSAS PESSOAS
+
+        Queremos reter e atrair pessoas agentes de transformação;
+
+        Vibramos com as conquistas, reagimos nas adversidades e valorizamos as atitudes;
+
+        SOMOS INOVADORES E DINÂMICOS
+
+        Acolhemos ideias e transformamos em marcas e produtos de qualidade, pensando na experiência de quem vai usá-los;
+
+        Nenhum obstáculo é tão alto quanto a nossa rapidez e flexibilidade em superá-lo;
+
+        Somos grandes. O dinamismo e a versatilidade não se perderam no crescimento;
+
+        EVOLUÇÃO E DESAFIOS
+
+        Surge uma oportunidade interessante e, se preciso for, nos reinventamos para conquistá-la;
+
+        Gostamos de desafios e conduzimos vários ao mesmo tempo;
+
+        Temos raízes fortes. Nossa história e ética sustentam nossa constante evolução;
+
+        CLIENTE NO CENTRO DE TUDO
+
+        Buscamos sempre entregar além do esperado. Capricho para nós não é mero detalhe.
+
+        Nascemos no Brasil, ousamos criar e desenvolver uma marca verde-amarela em tecnologia, e provamos que somos capazes de liderar, inovar e povoar os lares brasileiros;
+
+        Nos orgulhamos de ter facilitado a inclusão digital e melhorado a vida de muitos brasileiros, e ainda queremos mais;
+
+        Tecnologia é um caminho para melhorar a vida das pessoas, mas não o destino
     """
 )
 
-user = User(None, ["HTML", "CSS", "JavaScript", "mysql"], [Degree("test", "test", date(1999,8,2))], None, ["inglês"])
+user = User(None, ["HTML", "CSS", "JavaScript", "mysql"], [Degree("Análise de sistemas", "test", date(1999,8,2))], None, ["inglês"])
 attributeMatcher = JobAttributeMatcher(user= user, jobAttributes=test)
 
 #print(test)

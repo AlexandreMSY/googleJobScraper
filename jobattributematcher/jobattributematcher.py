@@ -15,16 +15,20 @@ class JobAttributeMatcher:
         jobRequiredHardSkills = jobRequiredSkills["hard"]
 
         return arrayWordMatcher(userSkills, jobRequiredHardSkills)
-    
+
     def __matchLanguages(self) -> dict:
         userLanguages = self.user.languages
         jobRequiredLanguages = self.jobAttributes["languages"]
-         
+
         return arrayWordMatcher(userLanguages, jobRequiredLanguages)
-    
+
     def __matchDegrees(self) -> dict:
-        userDegrees = self.user.degrees
-        jobRequiredDegrees = self.jobAttributes["degree"]
+        userDegrees = []
+        degreeObjects = self.user.degrees
+        jobRequiredDegrees = self.jobAttributes["degrees"]
+
+        for object in degreeObjects:
+            userDegrees.append(object.name)
         
         return arrayWordMatcher(userDegrees, jobRequiredDegrees)
 
@@ -32,9 +36,18 @@ class JobAttributeMatcher:
         skills = self.__matchSkills()
         languages = self.__matchLanguages()
         degrees = self.__matchDegrees()
-        
+
         return {
-            "skills": {"numOfWordsMatched": skills["numOfWordsMatched"], "wordsFound": skills["wordsFound"]},    
-            "languages": {"numOfWordsMatched": languages["numOfWordsMatched"], "wordsFound": languages["wordsFound"]},    
-            "degrees": {"numOfWordsMatched": degrees["numOfWordsMatched"], "wordsFound": degrees["wordsFound"]}    
+            "skills": {
+                "numOfWordsMatched": skills["numOfWordsMatched"],
+                "wordsFound": skills["wordsFound"],
+            },
+            "languages": {
+                "numOfWordsMatched": languages["numOfWordsMatched"],
+                "wordsFound": languages["wordsFound"],
+            },
+            "degrees": {
+                "numOfWordsMatched": degrees["numOfWordsMatched"],
+                "wordsFound": degrees["wordsFound"],
+            },
         }
