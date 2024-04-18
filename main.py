@@ -3,8 +3,13 @@ from user.userdetails import User
 from user.degree import Degree
 from datetime import date
 from jobattributematcher.jobattributematcher import JobAttributeMatcher
+from dotenv import load_dotenv
+import os
 
-parser = JobDescriptionParser("AIzaSyBznU6qeVaqrVTP08JbXqjXDQXr6qz4RjU")
+load_dotenv(".env")
+
+
+parser = JobDescriptionParser(os.getenv("GEMINI_API_KEY"))
 test = parser.parseJobDescription(
     """
         DESCRIÇÃO
