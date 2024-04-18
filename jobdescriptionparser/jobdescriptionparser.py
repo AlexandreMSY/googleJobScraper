@@ -13,6 +13,8 @@ class JobDescriptionParser:
             }
             "languages": []
         }
+        
+        Do not include programming languages inside "languages" key.
     """
 
     def __init__(self, geminiApiKey: str):

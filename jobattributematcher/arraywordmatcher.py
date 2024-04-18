@@ -1,4 +1,5 @@
 import unidecode
+from difflib import SequenceMatcher
 
 def arrayWordMatcher(array1: list[str], array2: list[str]):
     wordsMatched = 0
@@ -12,8 +13,11 @@ def arrayWordMatcher(array1: list[str], array2: list[str]):
             wordInArray2 = str(wordInArray2).lower()
             wordInArray2 = unidecode.unidecode(wordInArray2)
             
-            if wordInArray2.find(wordInArray1) != -1:
-                wordsFound.append(wordInArray2)
-                wordsMatched += 1
+            if wordInArray1 in wordInArray2:
+                if wordInArray2 in wordsFound:
+                    pass 
+                else:
+                    wordsFound.append(wordInArray2)
+                    wordsMatched += 1
 
     return {"numOfWordsMatched": wordsMatched, "wordsFound": wordsFound}
