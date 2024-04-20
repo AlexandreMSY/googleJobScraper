@@ -1,8 +1,8 @@
-from jobdescriptionparser.jobdescriptionparser import JobDescriptionParser
+from geminiTools.job_description_parser import JobDescriptionParser
 from user.userdetails import User
 from user.degree import Degree
 from datetime import date
-from jobattributematcher.jobattributematcher import JobAttributeMatcher
+from jobattributematcher.job_attribute_matcher import JobAttributeMatcher
 from dotenv import load_dotenv
 import os
 
@@ -12,51 +12,78 @@ load_dotenv(".env")
 parser = JobDescriptionParser(os.getenv("GEMINI_API_KEY"))
 test = parser.parseJobDescription(
     """
-        DESCRIÇÃO
+        A Aliare está entre as maiores empresas de software para o agronegócio do país. Nascemos no agro e somos especialistas em levar tecnologia para gestão de empresas e propriedades rurais.
 
-        Suas Principais Atividades
+        Estamos com nossos clientes, pra fazer o campo acontecer. Temos orgulho de ajudar a construir o presente e o futuro do agronegócio.
 
-        Desenvolvimento de projetos de websites , utilizando-se das ferramentas HTML e JavaScript;
-        Plataformas de gerenciamento de conteúdo na web: Fatwire, Websphere Content Management, Web Publishing, padrões HTML e Internacionalização;
-        Atuação em projetos de desenvolvimento / roll-out de Web Sites ; criação/gerenciamento de conteúdo;
-        Usuário da ferramenta SharePoint;
+        Responsabilidades e atribuições
+        • Auxiliar nos processos de desenvolvimento de novos produtos e na manutenção dos sistemas já existentes, e mantendo os sistemas de acordo com metodologias e técnicas pré-estabelecidas, visando atender aos objetivos estabelecidos quanto a qualidade, custos e prazos.
 
-        Experiência Necessária
+        Requisitos e qualificações
+        • Graduação completa ou em andamento em sistemas de informação, ciência da computação, sistemas para internet ou afins.
+        • Desejável experiência em GeneXus.
 
-        Necessária Programação: JavaScript, Java, HTML;
+        Informações adicionais
 
-        Desejável atuação em produção de catálogo de produtos; plataformas de catálogo de dados/produtos;
+        O que a Aliare proporciona?!
 
-        Formação superior/técnica completa na área de TI/Sistemas.
+        Um time integrado e preparado para novos desafios, que atua com credibilidade e transparência, com objetivo de evoluirmos de forma contínua para facilitar o trabalho de quem alimenta o mundo. Priorizando sempre em nossas ações a ética, o relacionamento, a realização, o comprometimento e inovação.
 
-        Local de trabalho: São Paulo, SP
-        Regime de contratação de tipo: Efetivo – CLT
-        Jornada: Período Integral
-        Área e especialização profissional: Informática, TI, Telecomunicações - Programador / Desenvolvedor
-        Nível hierárquico: Especialista
+        Plano de Saúde Nacional;
 
-        REQUISITOS
+        Plano Odontológico Nacional;
 
-        Escolaridade Mínima: Ensino Superior
+        Seguro de Vida;
 
-        HABILIDADES
+        Parceria com academias;
 
-        Web Publishing
-        Websphere Content Management
-        Java
-        JavaScript
-        Fatwire
-        Web Sites
-        SharePoint
-        HTML
+        Vale Flexível, Alimentação/Refeição;
 
-        BENEFÍCIOS
+        Vale Transporte;
 
-        Trabalho Remoto
-        Assistência médica
-        Assistência odontológica
-        Vale-refeição
-        Vale-alimentação
+        Auxílio Deslocamento/ Home Office;
+
+        Universidade Corporativa;
+
+        Auxílio Educação;
+
+        Premiação por atingimento de resultado anuais;
+
+        Bônus por Indicação;
+
+        Premiação por tempo de casa;
+
+        Presente aos filhos recém-nascidos dos #Aliados;
+
+        Presente exclusivo no seu aniversário;
+
+        Em nossas unidades, você vai encontrar um ambiente super legal, e claro que não poderia faltar, aquele café quentinho .
+
+        Nós somos um ecossistema de tecnologia com um só : facilitar o trabalho de quem alimenta o mundo!
+
+        E o que isso significa?
+
+        Que por meio da inovação, tecnologia e pessoas apaixonadas pelo que fazem, estamos ultrapassando as fronteiras e moldando o agronegócio do futuro.
+
+        Nos tornaremos a 1ª Big Tech Agro do Brasil! E para isso, estamos reunindo verdadeiros #Aliados para trilharem essa trajetória de conquistas com a gente. Aqui, valorizamos ideias diferentes, pois é como reproduzimos resultados únicos. Queremos pessoas dispostas a abraçarem o nosso Jeito Aliare de Ser.
+
+        Bateu aquela curiosidade para entender um pouco mais sobre nossa cultura e dia-a-dia? Confere um spoiler do que te espera por aqui Aliverso particular
+
+        E tem mais! Já somamos:
+
+        6 unidades físicas espalhadas pelo Brasil
+
+        +900 colaboradores
+
+        +50% do share de mercado de distribuição de insumos agrícolas
+
+        +65 mil usuários
+
+        +5 mil estabelecimentos
+
+        Atuação em 22 estados + DF
+
+        Perde tempo não, faça parte do nosso Aliverso
     """
 )
 
@@ -68,6 +95,4 @@ user = User(
     ["inglês"],
 )
 attributeMatcher = JobAttributeMatcher(user=user, jobAttributes=test)
-
-# print(test)
 print(attributeMatcher.attributesMatched())

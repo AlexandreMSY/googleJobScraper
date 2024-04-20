@@ -1,6 +1,11 @@
 from typing import Type
 from user.userdetails import User
 from jobattributematcher.arraywordmatcher import arrayWordMatcher
+from geminiTools.degree_relation_checker import DegreeRelationChecker
+from dotenv import load_dotenv
+import os
+
+load_dotenv(".env")
 
 
 class JobAttributeMatcher:
@@ -30,7 +35,19 @@ class JobAttributeMatcher:
         for object in degreeObjects:
             userDegrees.append(object.name)
         
-        return arrayWordMatcher(userDegrees, jobRequiredDegrees)
+        wordsFound = arrayWordMatcher(userDegrees, jobRequiredDegrees)
+        
+        if wordsFound['numOfWordsMatched'] == 0:
+            d = DegreeRelationChecker(os.getenv("GEMINI_API_KEY"), userDegrees, jobRequiredDegrees)
+            degreesRelated = d.checkRelation()
+            
+            if degreesRelated:
+                return {'numOfWordsMatched': len(userDegrees), 'wordsFound': userDegrees}
+            else:
+                return {'numOfWordsMatched': 0, 'wordsFound': []}
+            
+        else:
+            return wordsFound
 
     def attributesMatched(self) -> dict:
         skills = self.__matchSkills()
