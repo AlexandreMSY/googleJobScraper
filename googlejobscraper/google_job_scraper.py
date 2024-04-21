@@ -15,13 +15,15 @@ class GoogleJobScraper:
     def __init__(self, searchTags: list[str]):
         self.searchTags = searchTags
 
-    def search(self):
+    def search(self) -> list:
         for tag in self.searchTags:
             self.driver.get(self.url + f"/search?q={tag}")
             if self.__isJobRelatedTag():
                 self.__getJobsListed()
             else:
                 print("not job related")
+
+        return self.jobsFound
 
     # checks if search tag is a job related tag
     def __isJobRelatedTag(self) -> bool:
@@ -73,11 +75,11 @@ class GoogleJobScraper:
         for element in jobWebElements:
             jobDetails = self.__getJobDetails(element)
             self.jobsFound.append(jobDetails)
-        
-        #print(self.jobsFound)
+
+        self.driver.close()
 
     # this method scrapes the job listing attributes such as job title, company and etc
-    def __getJobDetails(self, element: WebElement) -> dict:   
+    def __getJobDetails(self, element: WebElement) -> dict:
         webdriver.ActionChains(self.driver).move_to_element(element).click(
             element
         ).perform()
@@ -88,17 +90,27 @@ class GoogleJobScraper:
             By.XPATH,
             "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[2]/div[2]/div[1]",
         ).text
-        location = jobDetailsDiv.find_element(
-            By.XPATH,
-            "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[2]/div[2]/div[2]",
-        ).text
+        location = (
+            jobDetailsDiv.find_elements(
+                By.XPATH,
+                "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[2]/div[2]/div[2]",
+            )[0].text
+            if len(                              #in case location text element is none
+                jobDetailsDiv.find_elements(
+                    By.XPATH,
+                    "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[2]/div[2]/div[2]",
+                )
+            )
+            > 0
+            else ""
+        )
         timePosted = None
         contractDetailsDiv = jobDetailsDiv.find_element(
             By.XPATH,
             "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[3]",
         ).find_elements(By.CLASS_NAME, "LL4CDc")
         contractDetails = {"salary": None, "contractType": None}
-        
+
         jobDescriptionDiv = jobDetailsDiv.find_element(
             By.XPATH,
             "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[4]",

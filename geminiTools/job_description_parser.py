@@ -4,7 +4,7 @@ import json
 
 class JobDescriptionParser:
     __GEMINI_PROMPT_MESSAGE = """
-        Create a JSON code with just skills, degrees and languages required for this job. Divide skills between hard and soft skills, use only key words for skills and languages. Answer with JSON code only. Strictly follow model below:
+        Create a JSON code with just skills, degrees and languages required for this job. Divide skills between hard and soft skills, use only key words for skills and languages. Strictly follow model below:
         {
             "degrees": []
             "skills": {
@@ -15,6 +15,7 @@ class JobDescriptionParser:
         }
         
         Do not include programming languages inside "languages" key.
+        Answer with JSON code only. No markup. No other words or observations.
     """
 
     def __init__(self, geminiApiKey: str):
@@ -27,8 +28,8 @@ class JobDescriptionParser:
             {jobDescription}
         """
         response = self.model.generate_content(generateContentMessage).text
-        formattedResponseText = response.replace("```", "").replace("json", "").replace("JSON", "")
+        formattedResponseText = response.replace("```json", "").replace("```JSON", "").replace("```", "")
         
-        print("Gemini Response: ", formattedResponseText)
+        print(formattedResponseText)
 
         return json.loads(formattedResponseText)  # converts string to json

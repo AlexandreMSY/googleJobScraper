@@ -38,8 +38,8 @@ class JobAttributeMatcher:
         wordsFound = arrayWordMatcher(userDegrees, jobRequiredDegrees)
         
         if wordsFound['numOfWordsMatched'] == 0:
-            d = DegreeRelationChecker(os.getenv("GEMINI_API_KEY"), userDegrees, jobRequiredDegrees)
-            degreesRelated = d.checkRelation()
+            degreeRelation = DegreeRelationChecker(os.getenv("GEMINI_API_KEY"), userDegrees, jobRequiredDegrees)
+            degreesRelated = degreeRelation.checkRelation()
             
             if degreesRelated:
                 return {'numOfWordsMatched': len(userDegrees), 'wordsFound': userDegrees}
