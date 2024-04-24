@@ -1,5 +1,7 @@
 import google.generativeai as genai
 import json
+import strip_markdown
+
 
 
 class JobDescriptionParser:
@@ -15,7 +17,8 @@ class JobDescriptionParser:
         }
         
         Do not include programming languages inside "languages" key.
-        Answer with JSON code only. No markup. No other words or observations.
+        Answer with JSON code only. 
+        No other words or observations.
     """
 
     def __init__(self, geminiApiKey: str):
@@ -28,8 +31,8 @@ class JobDescriptionParser:
             {jobDescription}
         """
         response = self.model.generate_content(generateContentMessage).text
-        formattedResponseText = response.replace("```json", "").replace("```JSON", "").replace("```", "")
+        formattedResponseText = strip_markdown.strip_markdown(response)
         
-        print(formattedResponseText)
+        print("f ", formattedResponseText.split("\n",1)[1])
 
         return json.loads(formattedResponseText)  # converts string to json

@@ -10,7 +10,7 @@ from googlejobscraper.google_job_scraper import GoogleJobScraper
 load_dotenv(".env")
 
 descriptionParser = JobDescriptionParser(os.getenv("GEMINI_API_KEY"))
-jobScraper = GoogleJobScraper(["estagio javascript remoto"])
+jobScraper = GoogleJobScraper(["estagio php remoto"])
 jobs = jobScraper.search()
 jobsJson = []
 
@@ -21,4 +21,5 @@ for i in jobs:
         )
     )
 
-print(jobsJson)
+for k in enumerate(jobsJson):
+    print(k)
