@@ -32,7 +32,9 @@ class JobDescriptionParser:
         """
         response = self.model.generate_content(generateContentMessage).text
         formattedResponseText = strip_markdown.strip_markdown(response)
+        formattedResponseTextLines = formattedResponseText.splitlines()
         
-        print("f ", formattedResponseText.split("\n",1)[1])
+        if formattedResponseTextLines[0].lower() == "json":
+            formattedResponseText = formattedResponseText.split("\n",1)[1]
 
         return json.loads(formattedResponseText)  # converts string to json
