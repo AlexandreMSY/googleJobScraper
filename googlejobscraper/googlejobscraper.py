@@ -5,13 +5,15 @@ from selenium.webdriver.remote.webelement import WebElement
 import time
 from googlejobscraper.containsnumber import containsNumber
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.chrome.options import Options
 
 
 class GoogleJobScraper:
-    jobsFound = []
+    jobsFound = {}
     url = str("https://www.google.com/")
     driver = webdriver.Chrome()
-
+    driver.minimize_window()
+    
     def __init__(self, searchTags: list[str]):
         self.searchTags = searchTags
 
@@ -19,18 +21,19 @@ class GoogleJobScraper:
         for tag in self.searchTags:
             self.driver.get(self.url + f"/search?q={tag}")
             if self.__isJobRelatedTag():
-                self.__getJobsListed()
+                self.__getJobsListed(tag)
             else:
                 print("not job related")
 
     # checks if search tag is a job related tag
     def __isJobRelatedTag(self) -> bool:
-        jobsQuickResult = self.driver.find_elements(By.CLASS_NAME, "nJXhWc")
+        self.driver.implicitly_wait(2)
+        jobsQuickResult = self.driver.find_elements(By.CLASS_NAME, "MjjYud")
         arrayLength = len(jobsQuickResult)
 
         return True if arrayLength > 0 else False
 
-    def __getJobsListed(self):
+    def __getJobsListed(self, tagName: str = None):
         moreJobsButton = self.driver.find_element(By.CLASS_NAME, "esVihe")
         moreJobsButton.click()
 
@@ -76,6 +79,13 @@ class GoogleJobScraper:
         
         #print(self.jobsFound)
 
+        jobDetails = []
+
+        for element in jobWebElements:
+            jobDetails.append(self.__getJobDetails(element))
+
+        self.jobsFound[tagName] = jobDetails
+
     # this method scrapes the job listing attributes such as job title, company and etc
     def __getJobDetails(self, element: WebElement) -> dict:   
         webdriver.ActionChains(self.driver).move_to_element(element).click(
@@ -92,6 +102,20 @@ class GoogleJobScraper:
             By.XPATH,
             "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[2]/div[2]/div[2]",
         ).text
+        location = (
+            jobDetailsDiv.find_elements(
+                By.XPATH,
+                "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[2]/div[2]/div[2]",
+            )[0].text
+            if len(  # in case location text element is none
+                jobDetailsDiv.find_elements(
+                    By.XPATH,
+                    "/html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div/div[1]/div/div/div[1]/div/div[2]/div[2]/div[2]",
+                )
+            )
+            > 0
+            else ""
+        )
         timePosted = None
         contractDetailsDiv = jobDetailsDiv.find_element(
             By.XPATH,
