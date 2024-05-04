@@ -3,15 +3,15 @@ import json
 import strip_markdown
 
 
-class JobDescriptionToJson:
+class JobDescriptionParser:
     __GEMINI_PROMPT_MESSAGE = """
         Create a JSON code with just skills, degrees and languages required for this job. Divide skills between hard and soft skills, use only key words for skills and languages. Strictly follow model below:
         {
-            "degrees": []
+            "degrees": [],
             "skills": {
-                "hard": []
+                "hard": [],
                 "soft": []
-            }
+            },
             "languages": []
         }
         
@@ -29,11 +29,16 @@ class JobDescriptionToJson:
             {self.__GEMINI_PROMPT_MESSAGE}
             {jobDescription}
         """
-        response = self.model.generate_content(generateContentMessage).text
-        formattedResponseText = strip_markdown.strip_markdown(response)
+        response = strip_markdown.strip_markdown(
+            self.model.generate_content(generateContentMessage).text
+        )
+        formattedResponseText = response
         formattedResponseTextLines = formattedResponseText.splitlines()
 
+        print(formattedResponseText)
+
         if formattedResponseTextLines[0].lower() == "json":
+            print("formatting")
             formattedResponseText = formattedResponseText.split("\n", 1)[1]
 
         return json.loads(formattedResponseText)  # converts string to json
