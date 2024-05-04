@@ -1,4 +1,4 @@
-from geminiTools.job_description_to_json import JobDescriptionToJson
+from geminiTools.job_description_to_json import JobDescriptionParser
 from user.userdetails import User
 from user.degree import Degree
 from datetime import date
@@ -12,7 +12,7 @@ load_dotenv(".env")
 jobScraper = GoogleJobScraper(["estágio php remoto"])
 jobs = jobScraper.returnJobsFound()
 
-jsonCreator = JobDescriptionToJson(os.getenv("GEMINI_API_KEY"))
+jsonCreator = JobDescriptionParser(os.getenv("GEMINI_API_KEY"))
 jobJSON = jsonCreator.createJson(
     jobs["estágio php remoto"][0]["jobDescription"]
 )
