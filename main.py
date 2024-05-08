@@ -9,12 +9,7 @@ import os
 
 load_dotenv(".env")
 
-jobScraper = GoogleJobScraper(["estágio php remoto"])
+jobScraper = GoogleJobScraper(["estagio php"])
 jobs = jobScraper.returnJobsFound()
 
-jsonCreator = JobDescriptionParser(os.getenv("GEMINI_API_KEY"))
-jobJSON = jsonCreator.createJson(
-    jobs["estágio php remoto"][0]["jobDescription"]
-)
-
-print(jobJSON)
+print(jobs)

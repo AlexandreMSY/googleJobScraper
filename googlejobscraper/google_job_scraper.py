@@ -4,24 +4,29 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 import time
 from googlejobscraper.containsnumber import containsNumber
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.chrome.options import Options
+from googlejobscraper.google_job_filter import GoogleJobFilter
 
 
-class GoogleJobScraper:
+class GoogleJobScraper(GoogleJobFilter):
     __jobsFound = {}
     __url = str("https://www.google.com/")
     __driver = webdriver.Chrome()
-    __driver.minimize_window()
+    # __driver.minimize_window()
 
     def __init__(self, searchTags: list[str]):
         self.searchTags = searchTags
+        super().__init__(
+            driver=self.__driver,
+            filtersDivXpath='//*[@id="immersive_desktop_root"]/div/div[2]/div',
+        )
 
     def returnJobsFound(self) -> dict:
         for tag in self.searchTags:
-            self.__driver.get(self.__url + f"/search?q={tag}")
+            self.__driver.get(self.__url + f"search?q={tag}")
+
             if self.__isJobRelatedTag():
-                self.__getJobsListed(tag)
+                self.filter()
+                self.__getJobsListed(tagName=tag)
             else:
                 print("not job related")
 
@@ -33,16 +38,19 @@ class GoogleJobScraper:
         jobsQuickResult = self.__driver.find_elements(By.CLASS_NAME, "MjjYud")
         arrayLength = len(jobsQuickResult)
 
-        return True if arrayLength > 0 else False
+        if arrayLength > 0:
+            moreJobsButton = self.__driver.find_element(By.CLASS_NAME, "esVihe")
+            moreJobsButton.click()
+
+            return True
+        else:
+            return False
 
     def __getJobsListed(self, tagName: str = None):
-        moreJobsButton = self.__driver.find_element(By.CLASS_NAME, "esVihe")
-        moreJobsButton.click()
-
+        jobs = []
         scrollableJobList = self.__driver.find_element(
             By.XPATH, '//*[@id="immersive_desktop_root"]/div/div[3]/div[1]'
         )
-        jobWebElements = []
 
         # the lines below are resposible for scrolling down the job list on the left side of the page
 
@@ -71,14 +79,15 @@ class GoogleJobScraper:
 
             last_height = new_height
 
-            jobWebElements = scrollableJobList.find_elements(
-                By.TAG_NAME, "li"
-            )  # clickable elements inside the scrollable list
+            # jobWebElements = scrollableJobList.find_elements(
+            #    By.TAG_NAME, "li"
+            # )  # clickable elements inside the scrollable list
 
+        jobs = scrollableJobList.find_elements(By.TAG_NAME, "li")
         jobDetails = []
 
-        for element in jobWebElements:
-            jobDetails.append(self.__getJobDetails(element))
+        for job in jobs:
+            jobDetails.append(self.__getJobDetails(job))
 
         self.__jobsFound[tagName] = jobDetails
 
@@ -89,6 +98,7 @@ class GoogleJobScraper:
         ).perform()
 
         jobDetailsDiv = self.__driver.find_element(By.ID, "tl_ditsc")
+
         jobTitle = jobDetailsDiv.find_element(By.TAG_NAME, "h2").text
         company = jobDetailsDiv.find_element(
             By.XPATH,
@@ -108,6 +118,7 @@ class GoogleJobScraper:
             > 0
             else ""
         )
+
         timePosted = None
         contractDetailsDiv = jobDetailsDiv.find_element(
             By.XPATH,
