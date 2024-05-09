@@ -34,11 +34,12 @@ class GoogleJobFilter:
                 self.__setLocationMaxDistance(4)
             elif "Date posted" in button.text:
                 button.click()
-                self.__setDatePosted(2)
+                self.__setMaxDatePosted(2)
             elif "New to you" in button.text:
                 button.click()
             elif "Type" in button.text:
                 button.click()
+                #self.__setJobType(2)
             else:
                 button.click()
 
@@ -61,7 +62,6 @@ class GoogleJobFilter:
         for div in divsInsideContainer:
             if buttonDivClass in div.get_attribute("class"):
                 if len(div.text) < 1:
-                    print(div.text)
                     divsInsideContainer.remove(div)
             else:
                 divsInsideContainer.remove(div)
@@ -75,13 +75,13 @@ class GoogleJobFilter:
             remoteXpath='//*[@id="choice_box_root"]/div[2]/div[1]/div[1]',
             buttonDivClass="TRwkpf GbaVB",
         )
-        
+
         if buttonIndex <= len(buttons):
             buttons[buttonIndex].click()
         else:
             buttons[len(buttons)].click()
 
-    def __setDatePosted(self, buttonIndex: int):
+    def __setMaxDatePosted(self, buttonIndex: int):
         buttons = self.__getButtonsInsideContainer(
             isRemoteJob=self.isRemoteJob,
             xpath='//*[@id="choice_box_root"]/div[2]/div[1]/div[2]',
@@ -92,5 +92,21 @@ class GoogleJobFilter:
         if buttonIndex <= len(buttons):
             buttons[buttonIndex].click()
         else:
-            buttons[4].click()
+            buttons[len(buttons)].click()
 
+    # to be implemented
+    def __setNewToYou(self, buttonIndex: int):
+        pass
+
+    # not working yet
+    # function not finding the buttons
+    def __setJobType(self, buttonIndex: int):
+        buttons = self.__getButtonsInsideContainer(
+            isRemoteJob=self.isRemoteJob,
+            xpath='//*[@id="choice_box_root"]/div[2]/div[3]',
+            remoteXpath='//*[@id="choice_box_root"]/div[2]/div[2]',
+            buttonDivClass="GbaVB",
+        )
+
+        for i in buttons:
+            print(i.text)
