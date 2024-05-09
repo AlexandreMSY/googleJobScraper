@@ -7,14 +7,17 @@ import time
 
 
 class GoogleJobFilter:
-    def __init__(self, driver: webdriver.Chrome, filtersDivXpath: str):
+    def __init__(
+        self, driver: webdriver.Chrome, filtersDivXpath: str, filterArguments: dict
+    ):
         self.driver = driver
         self.filtersAreaXpath = (
             filtersDivXpath  # the area where the filters buttons are located
         )
         self.isRemoteJob = False
+        self.filterArguments = filterArguments
 
-    def filter(self):
+    def filterJobs(self):
         filtersButtonContainer = self.driver.find_element(
             By.XPATH, '//*[@id="choice_box_root"]/div[1]/div[1]'
         )  # bar on the top that contains all the different filters (date posted, employer, etc)
@@ -27,19 +30,23 @@ class GoogleJobFilter:
         if "Location" not in spansInsideContainer[0].text:
             self.isRemoteJob = True
 
+        # filter arguments
+        locationMaxDistance = self.filterArguments["locationMaxDistance"]
+        maxDatePosted = self.filterArguments["maxDatePosted"]
+
         # the spans are acting as buttons
         for button in spansInsideContainer:
             if "Location" in button.text:
                 button.click()
-                self.__setLocationMaxDistance(4)
+                self.__setLocationMaxDistance(locationMaxDistance)
             elif "Date posted" in button.text:
                 button.click()
-                self.__setMaxDatePosted(2)
+                self.__setMaxDatePosted(maxDatePosted)
             elif "New to you" in button.text:
                 button.click()
             elif "Type" in button.text:
                 button.click()
-                #self.__setJobType(2)
+                # self.__setJobType(2)
             else:
                 button.click()
 

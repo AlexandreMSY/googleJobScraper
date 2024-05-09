@@ -25,7 +25,7 @@ class GoogleJobScraper(GoogleJobFilter):
             self.__driver.get(self.__url + f"search?q={tag}")
 
             if self.__isJobRelatedTag():
-                self.filter()
+                self.filterJobs()
                 self.__getJobsListed(tagName=tag)
             else:
                 print("not job related")
