@@ -1,6 +1,6 @@
 from typing import Type
 from user.userdetails import User
-from jobattributematcher.arraywordmatcher import arrayWordMatcher
+from geminiTools.jobattributematcher.arraywordmatcher import arrayWordMatcher
 from geminiTools.degree_relation_checker import DegreeRelationChecker
 from dotenv import load_dotenv
 import os
