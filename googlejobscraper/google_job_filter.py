@@ -31,9 +31,10 @@ class GoogleJobFilter:
         for button in spansInsideContainer:
             if "Location" in button.text:
                 button.click()
+                self.__setLocationMaxDistance(4)
             elif "Date posted" in button.text:
                 button.click()
-                self.__setDatePosted(0)
+                self.__setDatePosted(2)
             elif "New to you" in button.text:
                 button.click()
             elif "Type" in button.text:
@@ -48,6 +49,7 @@ class GoogleJobFilter:
         isRemoteJob: bool,
         xpath: str,
         remoteXpath: str,  # for some reason the container xpath if the job being searched for is a remote job
+        buttonDivClass: str,
     ) -> list[WebElement]:
         buttonsContainer = self.driver.find_element(
             By.XPATH, xpath if isRemoteJob else remoteXpath
@@ -57,7 +59,7 @@ class GoogleJobFilter:
         # filter divs that arent buttons
         # still not filtering placeholders, but i think its good enough
         for div in divsInsideContainer:
-            if "eNr05b" in div.get_attribute("class"):
+            if buttonDivClass in div.get_attribute("class"):
                 if len(div.text) < 1:
                     print(div.text)
                     divsInsideContainer.remove(div)
@@ -66,14 +68,29 @@ class GoogleJobFilter:
 
         return divsInsideContainer
 
+    def __setLocationMaxDistance(self, buttonIndex: int):
+        buttons = self.__getButtonsInsideContainer(
+            isRemoteJob=self.isRemoteJob,
+            xpath='//*[@id="choice_box_root"]/div[2]/div[1]/div[1]',
+            remoteXpath='//*[@id="choice_box_root"]/div[2]/div[1]/div[1]',
+            buttonDivClass="TRwkpf GbaVB",
+        )
+        
+        if buttonIndex <= len(buttons):
+            buttons[buttonIndex].click()
+        else:
+            buttons[len(buttons)].click()
+
     def __setDatePosted(self, buttonIndex: int):
         buttons = self.__getButtonsInsideContainer(
             isRemoteJob=self.isRemoteJob,
             xpath='//*[@id="choice_box_root"]/div[2]/div[1]/div[2]',
             remoteXpath='//*[@id="choice_box_root"]/div[2]/div[2]/div[2]',
+            buttonDivClass="eNr05b",
         )
 
-        if buttonIndex <= 4:
+        if buttonIndex <= len(buttons):
             buttons[buttonIndex].click()
         else:
             buttons[4].click()
+
