@@ -12,6 +12,4 @@ load_dotenv(".env")
 jobScraper = GoogleJobScraper(["estagio php"])
 jobs = jobScraper.returnJobsFound()
 
-
-
 print(jobs)

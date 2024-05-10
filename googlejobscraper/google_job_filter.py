@@ -8,7 +8,7 @@ import time
 
 class GoogleJobFilter:
     def __init__(
-        self, driver: webdriver.Chrome, filtersDivXpath: str, filterArguments: dict
+        self, driver: webdriver.Chrome, filtersDivXpath: str, filterArguments: dict = None
     ):
         self.driver = driver
         self.filtersAreaXpath = (
@@ -18,6 +18,7 @@ class GoogleJobFilter:
         self.filterArguments = filterArguments
 
     def filterJobs(self):
+        #gets buttons from the top, like 'location', 'type' etc
         filtersButtonContainer = self.driver.find_element(
             By.XPATH, '//*[@id="choice_box_root"]/div[1]/div[1]'
         )  # bar on the top that contains all the different filters (date posted, employer, etc)
@@ -31,24 +32,38 @@ class GoogleJobFilter:
             self.isRemoteJob = True
 
         # filter arguments
-        locationMaxDistance = self.filterArguments["locationMaxDistance"]
-        maxDatePosted = self.filterArguments["maxDatePosted"]
+        if self.filterArguments != None:
+            dictKeys = list(self.filterArguments) #extract dict keys
+            locationMaxDistance = None
+            maxDatePosted = None
+            
+            if 'locationMaxDistance' in dictKeys:
+                locationMaxDistance = self.filterArguments["locationMaxDistance"]
+            
+            if 'maxDatePosted' in dictKeys:
+                maxDatePosted = self.filterArguments["maxDatePosted"]
 
-        # the spans are acting as buttons
-        for button in spansInsideContainer:
-            if "Location" in button.text:
-                button.click()
-                self.__setLocationMaxDistance(locationMaxDistance)
-            elif "Date posted" in button.text:
-                button.click()
-                self.__setMaxDatePosted(maxDatePosted)
-            elif "New to you" in button.text:
-                button.click()
-            elif "Type" in button.text:
-                button.click()
-                # self.__setJobType(2)
-            else:
-                button.click()
+            # the spans are acting as buttons
+            for button in spansInsideContainer:
+                if "Location" in button.text:
+                    button.click()
+                    
+                    if locationMaxDistance != None:
+                        self.__setLocationMaxDistance(locationMaxDistance)
+                        
+                elif "Date posted" in button.text:
+                    button.click()
+                    
+                    if maxDatePosted != None:
+                        self.__setMaxDatePosted(maxDatePosted)
+                        
+                elif "New to you" in button.text:
+                    button.click()
+                elif "Type" in button.text:
+                    button.click()
+                    # self.__setJobType(2)
+                else:
+                    button.click()
 
     # returns the filter clickable buttons inside the filter area on the top of the page
     # https://imgur.com/fjUTSlP
