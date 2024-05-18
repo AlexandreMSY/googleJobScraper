@@ -18,7 +18,6 @@ class GoogleJobScraper(GoogleJobFilter):
         super().__init__(
             driver=self.__driver,
             filtersDivXpath='//*[@id="immersive_desktop_root"]/div/div[2]/div',
-            filterArguments={'locationMaxDistance': 3, 'maxDatePosted': 2}
         )
 
     def returnJobsFound(self) -> dict:
