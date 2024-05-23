@@ -26,16 +26,28 @@ class GoogleJobScraper(GoogleJobFilter):
         self.__driver.minimize_window()
         
         for tag in self.searchTags:
-            self.__driver.get(self.__url + f"search?q={tag}")
-
-            if self.__isJobRelatedTag():
-                self.filterJobs()
-                self.__getJobsListed(tagName=tag)
-            else:
-                print("not job related")
+            while True:
+                try:
+                    self.__search(tag= tag)
+                except:
+                    self.__driver.delete_all_cookies()
+                    self.__driver.refresh()
+                    
+                    time.sleep(2)
+                    pass
+                else:
+                    break
 
         return self.__jobsFound
 
+    
+    def __search(self, tag : str):
+        self.__driver.get(self.__url + f"search?q={tag}" + "&ibp=htl;jobs&sa=X&ved=2ahUKEwij6a6LmKOGAxUBD7kGHRRbAtQQudcGKAF6BAgcECg&sxsrf=ADLYWIJq1flXrGqDdBp_NndzQbysd2kBnA:1716447196466#htivrt=jobs&htidocid=zVNZM09ONVexjvWhAAAAAA%3D%3D&fpstate=tldetail")
+        print(self.__driver.current_url)
+                    
+        self.filterJobs()
+        self.__getJobsListed(tagName=tag)
+    
     # checks if search tag is a job related tag
     def __isJobRelatedTag(self) -> bool:
         self.__driver.implicitly_wait(2)
