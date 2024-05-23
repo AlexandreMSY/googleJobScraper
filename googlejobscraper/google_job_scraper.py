@@ -10,12 +10,11 @@ from googlejobscraper.google_job_filter import GoogleJobFilter
 class GoogleJobScraper(GoogleJobFilter):
     __jobsFound = {}
     __url = str("https://www.google.com/")
-    __driver = webdriver.Chrome()
-    __driver.minimize_window()
 
     def __init__(self, searchTags: list[str], filterArguments: dict = None):
         self.filterArguments = filterArguments
         self.searchTags = searchTags
+        self.__driver = webdriver.Chrome()
         
         super().__init__(
             driver=self.__driver,
@@ -24,6 +23,8 @@ class GoogleJobScraper(GoogleJobFilter):
         )
 
     def returnJobsFound(self) -> dict:
+        self.__driver.minimize_window()
+        
         for tag in self.searchTags:
             self.__driver.get(self.__url + f"search?q={tag}")
 

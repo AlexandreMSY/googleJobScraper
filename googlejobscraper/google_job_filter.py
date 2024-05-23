@@ -3,7 +3,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from googlejobscraper.containsnumber import containsNumber
+from selenium.webdriver.common.action_chains import ActionChains
 import time
+
 
 
 class GoogleJobFilter:
@@ -99,7 +101,7 @@ class GoogleJobFilter:
         )
 
         if buttonIndex <= len(buttons):
-            buttons[buttonIndex].click()
+            ActionChains(self.driver).move_to_element(buttons[buttonIndex]).click(buttons[buttonIndex]).perform()
         else:
             buttons[len(buttons)].click()
 

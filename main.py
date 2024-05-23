@@ -21,6 +21,7 @@ jobScraper = GoogleJobScraper(
         "maxDatePosted": toml["GOOGLE"]["max_date_posted"],
     },
 )
+
 jobs = jobScraper.returnJobsFound()
 
 print(jobs)
