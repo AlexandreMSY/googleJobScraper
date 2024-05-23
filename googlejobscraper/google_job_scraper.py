@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
+from selenium.common import NoSuchElementException
 import time
 from googlejobscraper.containsnumber import containsNumber
 from googlejobscraper.google_job_filter import GoogleJobFilter
@@ -29,7 +30,10 @@ class GoogleJobScraper(GoogleJobFilter):
             while True:
                 try:
                     self.__search(tag= tag)
-                except:
+                except NoSuchElementException as error:
+                    if '//*[@id="choice_box_root"]/div[1]/div[1]' in error.msg:
+                        return self.__jobsFound
+                    
                     self.__driver.delete_all_cookies()
                     self.__driver.refresh()
                     
@@ -48,19 +52,6 @@ class GoogleJobScraper(GoogleJobFilter):
         self.filterJobs()
         self.__getJobsListed(tagName=tag)
     
-    # checks if search tag is a job related tag
-    def __isJobRelatedTag(self) -> bool:
-        self.__driver.implicitly_wait(2)
-        jobsQuickResult = self.__driver.find_elements(By.CLASS_NAME, "MjjYud")
-        arrayLength = len(jobsQuickResult)
-
-        if arrayLength > 0:
-            moreJobsButton = self.__driver.find_element(By.CLASS_NAME, "esVihe")
-            moreJobsButton.click()
-
-            return True
-        else:
-            return False
 
     def __getJobsListed(self, tagName: str = None):
         jobs = []
