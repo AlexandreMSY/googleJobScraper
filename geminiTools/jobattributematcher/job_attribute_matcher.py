@@ -1,5 +1,5 @@
 from typing import Type
-from user.userdetails import User
+from user_profile.profile import Profile
 from geminiTools.jobattributematcher.arraywordmatcher import arrayWordMatcher
 from geminiTools.degree_relation_checker import DegreeRelationChecker
 from dotenv import load_dotenv
@@ -9,7 +9,7 @@ load_dotenv(".env")
 
 
 class JobAttributeMatcher:
-    def __init__(self, user: Type[User], jobAttributes: dict):
+    def __init__(self, user: Type[Profile], jobAttributes: dict):
         self.user = user
         self.jobAttributes = jobAttributes
 
@@ -34,20 +34,26 @@ class JobAttributeMatcher:
 
         for object in degreeObjects:
             userDegrees.append(object.name)
-        
+
         wordsFound = arrayWordMatcher(userDegrees, jobRequiredDegrees)
-        
-        if wordsFound['numOfWordsMatched'] == 0:
-            if len(jobRequiredDegrees) == 0: pass
-            
-            degreeRelation = DegreeRelationChecker(os.getenv("GEMINI_API_KEY"), userDegrees, jobRequiredDegrees)
+
+        if wordsFound["numOfWordsMatched"] == 0:
+            if len(jobRequiredDegrees) == 0:
+                pass
+
+            degreeRelation = DegreeRelationChecker(
+                os.getenv("GEMINI_API_KEY"), userDegrees, jobRequiredDegrees
+            )
             degreesRelated = degreeRelation.checkRelation()
-            
+
             if degreesRelated:
-                return {'numOfWordsMatched': len(userDegrees), 'wordsFound': userDegrees}
+                return {
+                    "numOfWordsMatched": len(userDegrees),
+                    "wordsFound": userDegrees,
+                }
             else:
-                return {'numOfWordsMatched': 0, 'wordsFound': []}
-            
+                return {"numOfWordsMatched": 0, "wordsFound": []}
+
         else:
             return wordsFound
 

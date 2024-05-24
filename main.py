@@ -1,5 +1,3 @@
-from user.userdetails import User
-from user.degree import Degree
 from datetime import date
 from dotenv import load_dotenv
 from googlejobscraper.google_job_scraper import GoogleJobScraper
@@ -15,7 +13,7 @@ toml = readToml("./config.toml")
 load_dotenv(".env")
 
 jobScraper = GoogleJobScraper(
-    ["estágio php", 'estágio javascript', 'estágio front-end'],
+    ["estágio php", "estágio javascript", "estágio front-end"],
     {
         "locationMaxDistance": toml["GOOGLE"]["location_max_distance"],
         "maxDatePosted": toml["GOOGLE"]["max_date_posted"],

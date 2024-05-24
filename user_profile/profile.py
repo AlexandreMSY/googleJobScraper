@@ -1,17 +1,16 @@
 from typing import Type
-from user.degree import Degree
-from user.certificate import Certificate
-from user.language import Language
+from user_profile.degree import Degree
+from user_profile.certificate import Certificate
 
 
-class User:
+class Profile:
     def __init__(
         self,
-        location: dict,
+        location: str,
         skills: list[str],
         degrees: list[Type[Degree]],
         certificates: list[Type[Certificate]],
-        languages: list[Type[Language]]
+        languages: list[str],
     ):
         self.location = location
         self.skills = skills
