@@ -49,14 +49,13 @@ class GoogleJobFilter:
             for button in spansInsideContainer:
                 if "Location" in button.text:
                     button.click()
-                    
                     if locationMaxDistance != None:
+                        time.sleep(1)
                         self.__setLocationMaxDistance(locationMaxDistance)
-                        
                 elif "Date posted" in button.text:
                     button.click()
-                    
                     if maxDatePosted != None:
+                        time.sleep(1)
                         self.__setMaxDatePosted(maxDatePosted)
                         
                 elif "New to you" in button.text:
@@ -101,9 +100,9 @@ class GoogleJobFilter:
         )
 
         if buttonIndex <= len(buttons):
-            ActionChains(self.driver).move_to_element(buttons[buttonIndex]).click(buttons[buttonIndex]).perform()
+            buttons[buttonIndex].click()
         else:
-            ActionChains(self.driver).move_to_element(buttons[len(buttons)]).click(buttons[len(buttons)]).perform()
+            buttons[len(buttons)].click()
 
     def __setMaxDatePosted(self, buttonIndex: int):
         buttons = self.__getButtonsInsideContainer(
@@ -112,12 +111,18 @@ class GoogleJobFilter:
             remoteXpath='//*[@id="choice_box_root"]/div[2]/div[2]/div[2]',
             buttonDivClass="eNr05b",
         )
+        
+        print(
+            type(buttons[3])
+        )
 
         if buttonIndex <= len(buttons):
-            ActionChains(self.driver).move_to_element(buttons[buttonIndex]).click(buttons[buttonIndex]).perform()
+            if 'eNr05b GbaVB ZkkK1e yUTMj k1U36b' in buttons[buttonIndex].get_attribute('class'):
+                buttons[buttonIndex].click()
         else:
-            ActionChains(self.driver).move_to_element(buttons[len(buttons)]).click(buttons[len(buttons)]).perform()
-
+            if 'eNr05b GbaVB ZkkK1e yUTMj k1U36b' in buttons[len(buttons)].get_attribute('class'):
+                buttons[len(buttons)].click()
+                
     # to be implemented
     def __setNewToYou(self, buttonIndex: int):
         pass
