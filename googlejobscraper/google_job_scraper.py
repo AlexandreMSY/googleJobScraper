@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
+from selenium.common.exceptions import NoSuchElementException
 import time
 from googlejobscraper.containsnumber import containsNumber
 from googlejobscraper.google_job_filter import GoogleJobFilter
@@ -15,52 +16,41 @@ class GoogleJobScraper(GoogleJobFilter):
         self.filterArguments = filterArguments
         self.searchTags = searchTags
         self.__driver = webdriver.Chrome()
-        
+
         super().__init__(
             driver=self.__driver,
             filtersDivXpath='//*[@id="immersive_desktop_root"]/div/div[2]/div',
-            filterArguments=self.filterArguments
+            filterArguments=self.filterArguments,
         )
 
     def returnJobsFound(self) -> dict:
         self.__driver.minimize_window()
-        
         for tag in self.searchTags:
             while True:
                 try:
-                    self.__search(tag= tag)
-                except:
+                    self.__search(tag=tag)
+                except NoSuchElementException as error:
+                    if '//*[@id="choice_box_root"]/div[1]/div[1]' in error.msg:
+                        return self.__jobsFound
+
                     self.__driver.delete_all_cookies()
                     self.__driver.refresh()
-                    
                     time.sleep(2)
                     pass
                 else:
                     break
-
         return self.__jobsFound
 
-    
-    def __search(self, tag : str):
-        self.__driver.get(self.__url + f"search?q={tag}" + "&ibp=htl;jobs&sa=X&ved=2ahUKEwij6a6LmKOGAxUBD7kGHRRbAtQQudcGKAF6BAgcECg&sxsrf=ADLYWIJq1flXrGqDdBp_NndzQbysd2kBnA:1716447196466#htivrt=jobs&htidocid=zVNZM09ONVexjvWhAAAAAA%3D%3D&fpstate=tldetail")
+    def __search(self, tag: str):
+        self.__driver.get(
+            self.__url
+            + f"search?q={tag}"
+            + "&ibp=htl;jobs&sa=X&ved=2ahUKEwij6a6LmKOGAxUBD7kGHRRbAtQQudcGKAF6BAgcECg&sxsrf=ADLYWIJq1flXrGqDdBp_NndzQbysd2kBnA:1716447196466#htivrt=jobs&htidocid=zVNZM09ONVexjvWhAAAAAA%3D%3D&fpstate=tldetail"
+        )
         print(self.__driver.current_url)
-                    
+
         self.filterJobs()
         self.__getJobsListed(tagName=tag)
-    
-    # checks if search tag is a job related tag
-    def __isJobRelatedTag(self) -> bool:
-        self.__driver.implicitly_wait(2)
-        jobsQuickResult = self.__driver.find_elements(By.CLASS_NAME, "MjjYud")
-        arrayLength = len(jobsQuickResult)
-
-        if arrayLength > 0:
-            moreJobsButton = self.__driver.find_element(By.CLASS_NAME, "esVihe")
-            moreJobsButton.click()
-
-            return True
-        else:
-            return False
 
     def __getJobsListed(self, tagName: str = None):
         jobs = []

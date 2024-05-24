@@ -15,7 +15,7 @@ toml = readToml("./config.toml")
 load_dotenv(".env")
 
 jobScraper = GoogleJobScraper(
-    ["estagio javascript", "estagio php"],
+    ["estágio php", 'estágio javascript', 'estágio front-end'],
     {
         "locationMaxDistance": toml["GOOGLE"]["location_max_distance"],
         "maxDatePosted": toml["GOOGLE"]["max_date_posted"],
