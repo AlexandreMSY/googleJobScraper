@@ -103,7 +103,7 @@ class GoogleJobFilter:
         if buttonIndex <= len(buttons):
             ActionChains(self.driver).move_to_element(buttons[buttonIndex]).click(buttons[buttonIndex]).perform()
         else:
-            buttons[len(buttons)].click()
+            ActionChains(self.driver).move_to_element(buttons[len(buttons)]).click(buttons[len(buttons)]).perform()
 
     def __setMaxDatePosted(self, buttonIndex: int):
         buttons = self.__getButtonsInsideContainer(
@@ -114,9 +114,9 @@ class GoogleJobFilter:
         )
 
         if buttonIndex <= len(buttons):
-            buttons[buttonIndex].click()
+            ActionChains(self.driver).move_to_element(buttons[buttonIndex]).click(buttons[buttonIndex]).perform()
         else:
-            buttons[len(buttons)].click()
+            ActionChains(self.driver).move_to_element(buttons[len(buttons)]).click(buttons[len(buttons)]).perform()
 
     # to be implemented
     def __setNewToYou(self, buttonIndex: int):
