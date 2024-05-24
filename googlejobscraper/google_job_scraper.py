@@ -24,14 +24,25 @@ class GoogleJobScraper(GoogleJobFilter):
         )
 
     def returnJobsFound(self) -> dict:
-        self.__driver.minimize_window()
+        #self.__driver.minimize_window()
         for tag in self.searchTags:
+            tries = 0
+            
+            #for some reason, google suddenly changes its layout. with enough refreshes and clearing cookies it goes back to the normal layout
             while True:
                 try:
                     self.__search(tag=tag)
+                #this error occurs on the new layout
                 except NoSuchElementException as error:
+                    #sometimes the url wont go directly to the jobs section and the program wont find the xpath below
                     if '//*[@id="choice_box_root"]/div[1]/div[1]' in error.msg:
-                        return self.__jobsFound
+                        if tries <= 4:
+                            self.__driver.delete_all_cookies()
+                            self.__driver.refresh()
+                            
+                            tries += 1
+                        else:
+                            return self.__jobsFound
 
                     self.__driver.delete_all_cookies()
                     self.__driver.refresh()
